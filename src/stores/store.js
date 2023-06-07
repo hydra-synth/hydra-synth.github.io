@@ -1,6 +1,6 @@
 const Gallery = require('./gallery.js')
 const repl = require('../views/editor/repl.js')
-
+console.log('ENVIRONMENT IS', process.env.NODE_ENV)
 
 module.exports = function store(state, emitter) {
   state.showInfo = true

@@ -13,10 +13,12 @@ module.exports = function toolbar(state, emit) {
     const toggleInfo = state.showInfo ? icon("close", "fa-times", t('toolbar.hide-info'), 'toggle info') : icon("close", "fa-question-circle", t('toolbar.show-info'), 'toggle info')  
     return html`<div>
         ${icon("run", `fa-play-circle ${hidden}`, t('toolbar.run'), 'editor:evalAll')}
-        ${icon("share", `fa-upload ${hidden}`, t('toolbar.upload'), 'gallery:shareSketch')}
         ${icon("clear", `fa fa-trash ${hidden}`, t('toolbar.clear'), 'editor:clearAll')}
         ${icon("shuffle", `fa-random`, t('toolbar.shuffle'), 'gallery:showExample')}
         ${icon("mutator", `fa-dice ${hidden}`, t('toolbar.random'), 'editor:randomize')}
         ${toggleInfo}
     </div>`
+
+    //        ${icon("share", `fa-upload ${hidden}`, t('toolbar.upload'), 'gallery:shareSketch')}
+
 }

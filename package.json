@@ -1,13 +1,13 @@
 {
-  "name": "frontend",
+  "name": "hydra-web-editor",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "uglify": "terser ./public/bundle.js --source-map \"content=inline\" -o ./public/bundle.min.js",
-    "watch": "watchify ./index.js -v -o ./public/bundle.js",
-    "build": "browserify ./index.js --debug -o ./public/bundle.js && npm run uglify",
+    "watch": "watchify ./index.js -t [ envify --NODE_ENV local] -v -o ./public/bundle.js",
+    "build": "browserify ./index.js -t [ envify --NODE_ENV local] --debug -o ./public/bundle.js && npm run uglify",
     "source-map": "source-map-explorer ./public/bundle.min.js ./public/bundle.min.js.map",
     "dev": "http-server ./public & npm run watch"
   },
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "browserify": "^17.0.0",
+    "envify": "^4.1.0",
     "http-server": "^14.1.1",
     "source-map-explorer": "^2.5.2",
     "terser": "^5.14.2",
