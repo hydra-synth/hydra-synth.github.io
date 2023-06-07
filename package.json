@@ -9,7 +9,8 @@
     "watch": "watchify ./index.js -t [ envify --NODE_ENV local] -v -o ./public/bundle.js",
     "build": "browserify ./index.js -t [ envify --NODE_ENV local] --debug -o ./public/bundle.js && npm run uglify",
     "source-map": "source-map-explorer ./public/bundle.min.js ./public/bundle.min.js.map",
-    "dev": "http-server ./public & npm run watch"
+    "dev": "http-server ./public & npm run watch",
+    "publish": "git subtree push --prefix=public origin gh-pages"
   },
   "author": "",
   "license": "AGPL",
