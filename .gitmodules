@@ -1,0 +1,15 @@
+[submodule "hydra"]
+	path = hydra
+	url = ../hydra.git
+[submodule "hydra-garden"]
+	path = hydra-garden
+	url = ../hydra-garden.git
+[submodule "hydra-functions"]
+	path = hydra-functions
+	url = ../hydra-functions.git
+[submodule "hydra-grants"]
+	path = hydra-grants
+	url = ../hydra-grants.git
+[submodule "hydra-docs"]
+	path = hydra-docs
+	url = ../hydra-docs.git

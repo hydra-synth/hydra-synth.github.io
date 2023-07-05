@@ -1,42 +1,19 @@
 {
-  "name": "hydra-web-editor",
+  "name": "hydra-website",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "uglify": "terser ./public/bundle.js --source-map \"content=inline\" -o ./public/bundle.min.js",
-    "watch": "watchify ./index.js -t [ envify --NODE_ENV local] -v -o ./public/bundle.js",
-    "build": "browserify ./index.js -t [ envify --NODE_ENV local] --debug -o ./public/bundle.js && npm run uglify",
-    "source-map": "source-map-explorer ./public/bundle.min.js ./public/bundle.min.js.map",
-    "dev": "http-server ./public & npm run watch",
-    "publish": "git subtree push --prefix=public origin gh-pages"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "AGPL",
-  "dependencies": {
-    "acorn": "^8.7.0",
-    "astravel": "^0.5.0",
-    "astring": "^1.4.0",
-    "choo": "^7.1.0",
-    "choo-devtools": "^3.0.4",
-    "codemirror-minified": "^5.65.0",
-    "hydra-synth": "^1.3.18",
-    "i18next": "^21.6.13",
-    "i18next-browser-languagedetector": "^6.1.3",
-    "i18next-http-backend": "^1.4.0",
-    "js-beautify": "^1.14.0",
-    "shortid": "^2.2.16",
-    "simple-peer": "^9.11.0",
-    "socket.io-client": "^2.3.0",
-    "superagent": "^7.0.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hydra-synth/hydra-synth.github.io.git"
   },
-  "devDependencies": {
-    "browserify": "^17.0.0",
-    "envify": "^4.1.0",
-    "http-server": "^14.1.1",
-    "source-map-explorer": "^2.5.2",
-    "terser": "^5.14.2",
-    "watchify": "^4.0.0"
-  }
+  "author": "ojack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hydra-synth/hydra-synth.github.io/issues"
+  },
+  "homepage": "https://github.com/hydra-synth/hydra-synth.github.io#readme"
 }
