@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "update": "git submodule foreach git pull origin main",
     "clear": "rm -rf dist && mkdir dist",
-    "build": "cp -a deploy/. dist/ && cp -r hydra-garden/dist/ dist/garden && cp -r hydra-functions/docs/ dist/api && cp -r hydra-functions/docs/ dist/functions && cp -r hydra-docs/ dist/docs && cp -r hydra-grants/public dist/grants && cp -a hydra/public/. dist/ "
+    "build": "cp -a deploy/. dist/ && cp -r hydra-garden/dist/ dist/garden && cp -r hydra-functions/docs/ dist/api && cp -r hydra-functions/docs/ dist/functions && cp -r hydra-docs/ dist/docs && cp -r hydra-grants/public dist/grants && cp -a hydra/public/. dist/",
+    "publish": "git subtree push --prefix=dist origin gh-pages"
   },
   "repository": {
     "type": "git",
