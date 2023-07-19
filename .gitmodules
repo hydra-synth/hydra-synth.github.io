@@ -13,3 +13,7 @@
 [submodule "hydra-docs"]
 	path = hydra-docs
 	url = ../hydra-docs.git
+[submodule "hydra-dev"]
+	path = hydra-dev
+	url = ../hydra.git
+	branch = dev

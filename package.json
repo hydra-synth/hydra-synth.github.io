@@ -9,7 +9,7 @@
     "clear": "rm -rf dist && mkdir dist",
     "build": "cp -a deploy/. dist/ && cp -r hydra-garden/dist/ dist/garden && cp -r hydra-functions/docs/ dist/api && cp -r hydra-functions/docs/ dist/functions && cp -r hydra-docs/ dist/docs && cp -r hydra-grants/public dist/grants && cp -a hydra/public/. dist/",
     "publish": "git subtree push --prefix=dist origin gh-pages",
-    "deploy-all": "npm run update && npm run clear && npm run build && git commit -am 'updated build' && npm run publish"
+    "deploy-all": "npm run update && npm run clear && npm run build && git add . && git commit -am 'updated build' && npm run publish"
   },
   "repository": {
     "type": "git",
