@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update": "git submodule foreach git pull origin main",
+    "update": "git submodule foreach git pull origin main && npm run update-dev",
+    "update-dev": "cd hydra-dev && git pull origin dev && cd ../",
     "clear": "rm -rf dist && mkdir dist",
-    "build": "cp -a deploy/. dist/ && cp -r hydra-garden/dist/ dist/garden && cp -r hydra-functions/docs/ dist/api && cp -r hydra-functions/docs/ dist/functions && cp -r hydra-docs/ dist/docs && cp -r hydra-grants/public dist/grants && cp -a hydra/public/. dist/",
+    "build": "cp -a deploy/. dist/ && cp -r hydra-garden/dist/ dist/garden && cp -r hydra-functions/docs/ dist/api && cp -r hydra-functions/docs/ dist/functions && cp -r hydra-docs/ dist/docs && cp -r hydra-grants/public dist/grants && cp -a hydra/public/. dist/ && cp -a hydra-dev/dist dist/dev",
     "publish": "git subtree push --prefix=dist origin gh-pages",
     "deploy-all": "npm run update && npm run clear && npm run build && git add . && git commit -am 'updated build' && npm run publish"
   },
