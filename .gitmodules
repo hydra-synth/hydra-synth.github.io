@@ -17,3 +17,6 @@
 	path = hydra-dev
 	url = ../hydra.git
 	branch = dev
+[submodule "hydra-docs-v2"]
+	path = hydra-docs-v2
+	url = ../hydra-docs-v2.git
