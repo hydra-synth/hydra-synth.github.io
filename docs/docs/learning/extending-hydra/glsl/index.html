@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="GLSL Guide # Using custom GLSL functions # Hydra is built using GLSL (a language for generating a program, or shader, that runs directly on the graphics card using WebGl). Each javascript function in hydra corresponds directly to a snippet of shader code. Hydra has a unique way of adding custom source and transform functions which we will explain here.
-setFunction # The Hydra API includes a function called setFunction which receives a specific type of JavaScript object.">
+<meta name="description" content="GLSL Guide # Using custom GLSL functions # Hydra is built using GLSL (a language for generating a program, or shader, that runs directly on the graphics card using WebGl). Each javascript function in hydra corresponds directly to a snippet of shader code. There are four possible types in hydra: src, coord (geometry), combine (blend), combineCoord (modulate). Each string of functions is composited based on its type into a single string of fragment shader code.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Custom GLSL" />
-<meta property="og:description" content="GLSL Guide # Using custom GLSL functions # Hydra is built using GLSL (a language for generating a program, or shader, that runs directly on the graphics card using WebGl). Each javascript function in hydra corresponds directly to a snippet of shader code. Hydra has a unique way of adding custom source and transform functions which we will explain here.
-setFunction # The Hydra API includes a function called setFunction which receives a specific type of JavaScript object." />
+<meta property="og:description" content="GLSL Guide # Using custom GLSL functions # Hydra is built using GLSL (a language for generating a program, or shader, that runs directly on the graphics card using WebGl). Each javascript function in hydra corresponds directly to a snippet of shader code. There are four possible types in hydra: src, coord (geometry), combine (blend), combineCoord (modulate). Each string of functions is composited based on its type into a single string of fragment shader code." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/glsl/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-11-20T16:19:06+01:00" />
+<meta property="article:modified_time" content="2023-12-02T14:51:44-05:00" />
 <title>Custom GLSL | hydra video synth</title>
 <link rel="manifest" href="/docs/manifest.json">
 <link rel="icon" href="/docs/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/docs/book.min.9bac9dc478cf52ca962a4f35e004c2cdc70a5461e7451956af25f951f9749ded.css" integrity="sha256-m6ydxHjPUsqWKk814ATCzccKVGHnRRlWryX5Ufl0ne0=" crossorigin="anonymous">
   <script defer src="/docs/flexsearch.min.js"></script>
-  <script defer src="/docs/en.search.min.d64c28be836096dab2a26192d88fdda410763b072a7bc0826cda62819a3fb424.js" integrity="sha256-1kwovoNgltqyomGS2I/dpBB2Owcqe8CCbNpigZo/tCQ=" crossorigin="anonymous"></script>
+  <script defer src="/docs/en.search.min.c0cdc9f1af0017e9cdc0e9c2736f81073249da4606e0c6c7a58f5d45cae92ceb.js" integrity="sha256-wM3J8a8AF&#43;nNwOnCc2&#43;BBzJJ2kYG4MbHpY9dRcrpLOs=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -463,8 +461,6 @@ crossorigin="anonymous"
       
     
       
-    
-      
         <li>
           
   
@@ -749,10 +745,19 @@ crossorigin="anonymous"
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#using-custom-glsl-functions">Using custom GLSL functions</a>
+    <li><a href="#using-custom-glsl-functions">Using custom GLSL functions</a></li>
+    <li><a href="#setfunction">setFunction</a>
       <ul>
-        <li><a href="#setfunction">setFunction</a></li>
-        <li><a href="#types-of-glsl-functions-and-their-arguments">Types of GLSL functions and their arguments</a></li>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#types-of-glsl-functions-and-their-arguments">Types of GLSL functions and their arguments</a>
+      <ul>
+        <li><a href="#src">src</a></li>
+        <li><a href="#color">color</a></li>
+        <li><a href="#coord">coord</a></li>
+        <li><a href="#combine">combine</a></li>
+        <li><a href="#combinecoord">combineCoord</a></li>
         <li><a href="#built-in-functions-you-can-use">Built in functions you can use</a></li>
         <li><a href="#examples">Examples</a></li>
       </ul>
@@ -785,45 +790,122 @@ crossorigin="anonymous"
   Using custom GLSL functions
   <a class="anchor" href="#using-custom-glsl-functions">#</a>
 </h2>
-<p>Hydra is built using GLSL (a language for generating a program, or shader, that runs directly on the graphics card using WebGl). Each javascript function in hydra corresponds directly to a snippet of shader code. Hydra has a unique way of adding custom source and transform functions which we will explain here.</p>
-<h3 id="setfunction">
+<p>Hydra is built using GLSL (a language for generating a program, or shader, that runs directly on the graphics card using WebGl). Each javascript function in hydra corresponds directly to a snippet of shader code. There are four possible types in hydra: src, coord (geometry), combine (blend), combineCoord (modulate). Each string of functions is composited based on its type into a single string of fragment shader code.</p>
+<p>You can see the glsl for each existing hydra function in <a href="https://github.com/hydra-synth/hydra-synth/blob/main/src/glsl/glsl-functions.js">glsl-functions.js</a> of the hydra source code.</p>
+<p>You can see the fragment shader code generated by a chain of functions in hydra, by replacing the <code>.out()</code> in a function chain with <code>.glsl()</code>, and then logging the results.</p>
+<p>For example, <code>console.log(osc().glsl()[0])</code> will show the fragment shader generates by <code>osc()</code> in the browser console.</p>
+<h2 id="setfunction">
   setFunction
   <a class="anchor" href="#setfunction">#</a>
-</h3>
-<p>The Hydra API includes a function called <code>setFunction</code> which receives a specific type of JavaScript object. This object will have the properties <code>name</code>, <code>type</code>, <code>inputs</code> and <code>glsl</code>.</p>
+</h2>
+<p>The hydra-synth API includes a function called <code>setFunction</code> which lets you dynamically add a function with custom GLSL and custom name, and use it elsewhere in the code.</p>
 <ul>
 <li><code>name</code> is a String with the name for the function</li>
-<li><code>type</code> is one of the available types of functions (&lsquo;src&rsquo;, &lsquo;color&rsquo;, &lsquo;coord&rsquo;, &lsquo;combine&rsquo;, &lsquo;combineCoord&rsquo;)</li>
-<li><code>inputs</code> is an Array of objects each with it&rsquo;s own <code>name</code>, <code>type</code> and <code>default</code> properties. They represent the arguments of the GLSL function.</li>
+<li><code>type</code> is one of the available types of functions (&lsquo;src&rsquo;, &lsquo;color&rsquo;, &lsquo;coord&rsquo;, &lsquo;combine&rsquo;, &lsquo;combineCoord&rsquo;, esplained below)</li>
+<li><code>inputs</code> is an Array of objects each with it&rsquo;s own <code>name</code>, <code>type</code> and <code>default</code> properties. These become the arguments of the generated GLSL function.</li>
 <li><code>glsl</code> is a String with the glsl code.</li>
 </ul>
-<h4 id="example">
+<h3 id="example">
   Example
   <a class="anchor" href="#example">#</a>
-</h4>
+</h3>
+<p>For example, the following code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">setFunction</span>({
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;myOsc&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">inputs</span><span style="color:#f92672">:</span> [
-</span></span><span style="display:flex;"><span>        { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;freq&#39;</span>, <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;float&#39;</span>, <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span> }
-</span></span><span style="display:flex;"><span>    ],
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">glsl</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        return vec4(sin((_st.x+time)*freq*vec3(0.1)),1.0);
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    `</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;gradient2&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inputs</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;float&#39;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;speed&#39;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">glsl</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`   return vec4(sin(time*speed), _st, 1.0);`</span>
 </span></span><span style="display:flex;"><span>})
-</span></span></code></pre></div><h3 id="types-of-glsl-functions-and-their-arguments">
+</span></span></code></pre></div><p>will generate the glsl function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span>vec4 <span style="color:#a6e22e">gradient2</span>(vec2 _st, <span style="color:#66d9ef">float</span> speed){
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">vec4</span>(<span style="color:#a6e22e">sin</span>(time<span style="color:#f92672">*</span>speed), _st, <span style="color:#ae81ff">1.0</span>);;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>that is then usable in hydra using <code>gradient2().out()</code></p>
+<p>full example:</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "setFunction({\n  name: 'gradient2',\n  type: 'src',\n  inputs: [\n    {\n      type: 'float',\n      name: 'speed',\n      default: 0,\n    }\n  ],\n  glsl:\n`   return vec4(sin(time*speed), _st, 1.0);`\n})\n//\ngradient2(1).out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h2 id="types-of-glsl-functions-and-their-arguments">
   Types of GLSL functions and their arguments
   <a class="anchor" href="#types-of-glsl-functions-and-their-arguments">#</a>
-</h3>
-<h4 id="src">
+</h2>
+<p>Types and default arguments for hydra functions.
+The value in the &rsquo;type&rsquo; field lets the parser know which type of function will be returned as well as default arguments.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">types</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;src&#39;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">returnType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;vec4&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;vec2 _st&#39;</span>]
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;coord&#39;</span><span style="color:#f92672">:</span> {  <span style="color:#75715e">// geometry
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">returnType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;vec2&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;vec2 _st&#39;</span>]
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;color&#39;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">returnType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;vec4&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;vec4 _c0&#39;</span>]
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;combine&#39;</span><span style="color:#f92672">:</span> { <span style="color:#75715e">// blending
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">returnType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;vec4&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;vec4 _c0&#39;</span>, <span style="color:#e6db74">&#39;vec4 _c1&#39;</span>]
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;combineCoord&#39;</span><span style="color:#f92672">:</span> { <span style="color:#75715e">// modulation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">returnType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;vec2&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;vec2 _st&#39;</span>, <span style="color:#e6db74">&#39;vec4 _c0&#39;</span>]
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="src">
   src
   <a class="anchor" href="#src">#</a>
-</h4>
+</h3>
 <p>A function with a specified type of <code>src</code> is one that generates visuals by its own. Just like <code>osc</code> or <code>noise</code>. They all have a <code>vec2</code> argument called <code>_st</code> for the coordinate. And you can add any custom inputs as shown above. You must return a <code>vec4</code>.</p>
-<h4 id="color">
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "setFunction({\n  name: 'myOsc',\n  type: 'src',\n  inputs: [\n    {\n      type: 'float',\n      name: 'frequency',\n      default: 60,\n    },\n{\n      type: 'float',\n      name: 'sync',\n      default: 0.1,\n    },\n{\n      type: 'float',\n      name: 'offset',\n      default: 0,\n    }\n  ],\n  glsl:\n`   vec2 st = _st;\n   float r = sin((st.x-offset/frequency+time*sync)*frequency)*0.5  + 0.5;\n   float g = sin((-st.x+time*sync*2.)*frequency)*0.5 + 0.5;\n   float b = sin((st.x+offset/frequency+time*sync)*frequency)*0.5  + 0.5;\n   return vec4(r, g, b, 1.0);`\n})\n\nmyOsc(10).out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="color">
   color
   <a class="anchor" href="#color">#</a>
-</h4>
+</h3>
 <p>A <code>color</code> function receives a <code>vec4</code> called <code>_c0</code> that represents the color being affected by the transform. As any function you may add any extra inputs. You must return another <code>vec4</code>.</p>
 <div class="hydra-example">
     
@@ -845,10 +927,10 @@ crossorigin="anonymous"
             
         preEl.style.display = "none";
     </script>
-</div><h4 id="coord">
+</div><h3 id="coord">
   coord
   <a class="anchor" href="#coord">#</a>
-</h4>
+</h3>
 <p>A <code>coord</code> function receives a <code>vec2</code> called <code>_st</code> that represents the coordinate plane. You must return another <code>vec2</code>.</p>
 <div class="hydra-example">
     
@@ -870,10 +952,10 @@ crossorigin="anonymous"
             
         preEl.style.display = "none";
     </script>
-</div><h4 id="combine">
+</div><h3 id="combine">
   combine
   <a class="anchor" href="#combine">#</a>
-</h4>
+</h3>
 <p>The functions of type <code>combine</code> receive 2 <code>vec4</code> arguments, <code>_c0</code> and <code>_c1</code>. The first one represents the texture being affected and the latter represents the texture being blended into the former. For example, when you use <code>osc().mult(noise())</code>, inside the definition of the function, <code>_c0</code> represents the <code>osc()</code> and <code>_c1</code> represents the <code>noise()</code> colors. You can think combine functions as blending modes. And as custom function you may add extra inputs as needed. You must return a <code>vec4</code>.</p>
 <div class="hydra-example">
     
@@ -895,10 +977,10 @@ crossorigin="anonymous"
             
         preEl.style.display = "none";
     </script>
-</div><h4 id="combinecoord">
+</div><h3 id="combinecoord">
   combineCoord
   <a class="anchor" href="#combinecoord">#</a>
-</h4>
+</h3>
 <p><code>combineCoord</code> functions change the position of colors in the texture being affected given the colors of another texture. Think about the many modulate functions for example, since they are precisely this type. They receive a <code>vec2 _st</code> and a <code>vec4 _c0</code>. You must return a <code>vec2</code>.</p>
 <div class="hydra-example">
     
@@ -1055,9 +1137,9 @@ crossorigin="anonymous"
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/1dd27b0a5f5ca9dcec9e0cccc27657c0a09cf72d" title='Last modified by ojack | November 20, 2023' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/b6cf243ecbebe95c1508d98a925d73b1c42b00e5" title='Last modified by ojack | December 2, 2023' target="_blank" rel="noopener">
       <img src="/docs/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 20, 2023</span>
+      <span>December 2, 2023</span>
     </a>
   </div>
 
@@ -1100,10 +1182,19 @@ crossorigin="anonymous"
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#using-custom-glsl-functions">Using custom GLSL functions</a>
+    <li><a href="#using-custom-glsl-functions">Using custom GLSL functions</a></li>
+    <li><a href="#setfunction">setFunction</a>
       <ul>
-        <li><a href="#setfunction">setFunction</a></li>
-        <li><a href="#types-of-glsl-functions-and-their-arguments">Types of GLSL functions and their arguments</a></li>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#types-of-glsl-functions-and-their-arguments">Types of GLSL functions and their arguments</a>
+      <ul>
+        <li><a href="#src">src</a></li>
+        <li><a href="#color">color</a></li>
+        <li><a href="#coord">coord</a></li>
+        <li><a href="#combine">combine</a></li>
+        <li><a href="#combinecoord">combineCoord</a></li>
         <li><a href="#built-in-functions-you-can-use">Built in functions you can use</a></li>
         <li><a href="#examples">Examples</a></li>
       </ul>
