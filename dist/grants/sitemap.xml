@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hydra.ojack.xyz/grants/_about/</loc>
+    <loc>http://localhost:1313/grants/</loc>
   </url><url>
-    <loc>https://hydra.ojack.xyz/grants/about/</loc>
+    <loc>http://localhost:1313/grants/about/</loc>
   </url><url>
-    <loc>https://hydra.ojack.xyz/grants/</loc>
+    <loc>http://localhost:1313/grants/apply/</loc>
   </url><url>
-    <loc>https://hydra.ojack.xyz/grants/apply/</loc>
+    <loc>http://localhost:1313/grants/faq/</loc>
   </url><url>
-    <loc>https://hydra.ojack.xyz/grants/contact/</loc>
+    <loc>http://localhost:1313/grants/2022/</loc>
   </url><url>
-    <loc>https://hydra.ojack.xyz/grants/recipients/</loc>
+    <loc>http://localhost:1313/grants/recipients/</loc>
   </url><url>
-    <loc>https://hydra.ojack.xyz/grants/support/</loc>
+    <loc>http://localhost:1313/grants/support/</loc>
   </url><url>
-    <loc>https://hydra.ojack.xyz/grants/team/</loc>
+    <loc>http://localhost:1313/grants/team/</loc>
   </url>
 </urlset>
