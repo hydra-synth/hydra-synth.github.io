@@ -114,7 +114,7 @@
     .color(1, -1, 0.4)
     .diff(
       
-      shape(10, 0, fixedSmooth([0.4, 0.95]))
+      shape(10, 0, 0.4)
         .repeat(9)
         .kaleid()
         .scrollY(5, 0.2)
@@ -125,8 +125,14 @@
     .modulateHue(o0, 10)
     .mult(o0, 0.67)
     .blend(o0)
-    .modulateScrollY(osc(1).scale(() => 0.9 * (mouse.y / innerHeight)),0.02)
+    .modulateScrollY(osc(4).scale(() => {
+      console.log('VALUES', innerHeight, mouse.y)
+
+      return 0.001 + 0.6 * (mouse.y / innerHeight)}),0.02)
+  
     .out();
+
+    console.log('VALUES', innerHeight, mouse.y)
 
 
     

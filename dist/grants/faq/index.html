@@ -114,7 +114,7 @@
     .color(1, -1, 0.4)
     .diff(
       
-      shape(10, 0, fixedSmooth([0.4, 0.95]))
+      shape(10, 0, 0.4)
         .repeat(9)
         .kaleid()
         .scrollY(5, 0.2)
@@ -125,8 +125,14 @@
     .modulateHue(o0, 10)
     .mult(o0, 0.67)
     .blend(o0)
-    .modulateScrollY(osc(1).scale(() => 0.9 * (mouse.y / innerHeight)),0.02)
+    .modulateScrollY(osc(4).scale(() => {
+      console.log('VALUES', innerHeight, mouse.y)
+
+      return 0.001 + 0.6 * (mouse.y / innerHeight)}),0.02)
+  
     .out();
+
+    console.log('VALUES', innerHeight, mouse.y)
 
 
     
@@ -235,7 +241,7 @@
 <h2 id="how-is-it-funded">How is it funded?</h2>
 <p>The grant is funded by donations to the <a href="https://opencollective.com/hydra-synth">hydra open collective</a>. The more funds we receive, the more awards we are able to offer in the future. Please support if you are able!</p>
 <h2 id="when-is-the-deadline">When is the deadline</h2>
-<p>The deadline for applications is 25th November at 23:59 GMT. Late applications will not be accepted.</p>
+<p>The deadline for applications is December 2nd at 23:59 GMT. Late applications will not be accepted.</p>
 <h2 id="who-will-decide-who-gets-the-grants">Who will decide who gets the grants</h2>
 <p>Each application will be judged by the core Hydra Grants team and an invited guest judge. Learn more <a href="https://hydra.ojack.xyz/grants/team/">about the team here</a>.</p>
 <h2 id="questions">Questions</h2>
