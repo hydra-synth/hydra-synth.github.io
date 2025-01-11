@@ -26,9 +26,23 @@ body {
   background-color: #004d3f;
 }
 
-h1, h2, h3{
+h1, h2, h3, h5{
   font-family: "OrticaAng";
   color: palegoldenrod;
+}
+
+h5 {
+  font-family: "Coconat", sans-serif;
+  /* margin-top: 50px; */
+}
+
+#content blockquote  {
+  
+  color: palegoldenrod;
+  border: dotted 2px palegoldenrod;
+  outline: 2px dotted palegoldenrod;
+  outline-offset: 5px;
+  font-style: normal;
 }
 
 a.navbar-brand {
