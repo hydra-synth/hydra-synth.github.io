@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "OrticaAng";
+  src: url("../OrticaAngular-Bold.woff") format("woff2");
+  font-size: medium;
+  /* font-style: italic; */
+}
+
+
+@font-face {
+  font-family: "Coconat";
+  src: url("../Coconat-Regular.woff2") format("woff2");
+  font-size: medium;
+  /* font-style: italic; */
+}
+
+
+body,
+p {
+  font-size: 1.2rem;
+  font-family: "Coconat", sans-serif !important;
+  font-weight: bolder;
+  color: rgb(218, 231, 218);
+}
+
+body {
+  background-color: #004d3f;
+}
+
+h1, h2, h3, h5{
+  font-family: "OrticaAng";
+  color: palegoldenrod;
+}
+
+h5 {
+  font-family: "Coconat", sans-serif;
+  /* margin-top: 50px; */
+}
+
+#content blockquote  {
+  
+  color: palegoldenrod;
+  border: dotted 2px palegoldenrod;
+  outline: 2px dotted palegoldenrod;
+  outline-offset: 5px;
+  font-style: normal;
+}
+
+a.navbar-brand {
+  font-family: "OrticaAng" !important;
+  /* font-weight: 900; */
+  /* font-size: 2rem; */
+  color: rgb(255, 226, 98) !important;
+}
+a {
+  font-family: "OrticaAng" !important;
+  /* font-weight: 900; */
+  /* font-size: 1.2rem; */
+  color: rgb(255, 226, 98) !important;
+}
+
+a.nav-item  {
+    font-family: "Coconat" !important;
+    font-weight: 900;
+    font-size: 0.9rem;
+    /* font-style: italic; */
+    color: rgb(255, 226, 98) !important;
+  }
+
+
+ul li, li strong {
+  font-family: "Coconat";
+  font-weight:bolder;
+  color: palegoldenrod;
+}
+em, strong {
+  color:palegoldenrod;
+}
+a:hover {
+  background-color: rgba(213, 86, 206, 0.5);
+  mix-blend-mode:difference;
+}

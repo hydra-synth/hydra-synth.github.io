@@ -250,7 +250,7 @@ Type of Documents # hydra-documents: Guides and this document, which can be foun
       <description>Hydra-Synth # In addition to using hydra within the hydra web editor, it is also possible to use the hydra video-synth engine as a library within your own javascript projects.
 hydra-synth is a javascript library containing the main logic of hydra packaged as a javascript module.
 To include in a webpage (bundled version): # Include the bundled version of hydra-synth in your html file:
-&amp;lt;script src=&amp;#34;https://unpkg.com/hydra-synth&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; // create a new hydra-synth instance var hydra = new Hydra({ detectAudio: false }) osc(4, 0.</description>
+&amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; // create a new hydra-synth instance var hydra = new Hydra({ detectAudio: false }) osc(4, 0.</description>
     </item>
     
     <item>
