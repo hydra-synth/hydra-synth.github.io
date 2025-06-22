@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hydra video synth</title>
-    <link>http://localhost:1313/hydra-docs-v2/pt/</link>
+    <link>https://hydra.ojack.xyz/docs/pt/</link>
     <description>Recent content on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
-    <atom:link href="http://localhost:1313/hydra-docs-v2/pt/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hydra.ojack.xyz/docs/pt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Começando</title>
-      <link>http://localhost:1313/hydra-docs-v2/pt/docs/learning/getting-started/</link>
+      <link>https://hydra.ojack.xyz/docs/pt/docs/learning/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/pt/docs/learning/getting-started/</guid>
+      <guid>https://hydra.ojack.xyz/docs/pt/docs/learning/getting-started/</guid>
       <description>Começando # Este documento é uma introdução à criação de visuais ao vivo usando o Hydra. Abrange o básico da escrita de código no navegador para gerar e combinar fontes de vídeo em tempo real. Nenhuma experiência com programação ou vídeo é necessária!&#xA;Este tutorial é pensado para ser usado dentro do editor web hydra. Também é interativo &amp;ndash; podemos alterar o código em cada bloco para ver como isso afeta os visuais.</description>
     </item>
     <item>
       <title>Tópicos Adicionais</title>
-      <link>http://localhost:1313/hydra-docs-v2/pt/docs/learning/additional-topics/</link>
+      <link>https://hydra.ojack.xyz/docs/pt/docs/learning/additional-topics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/pt/docs/learning/additional-topics/</guid>
+      <guid>https://hydra.ojack.xyz/docs/pt/docs/learning/additional-topics/</guid>
       <description>Tópicos Adicionais # live coding: avaliar linhas ou blocos de código separado # Pressione ctrl+enter para executar uma linha de código. Pressione shift+ctrl+enter para avaliar um bloco de código. Dica: podemos alternar entre diferentes linhas de código para uma performance de live coding.&#xA;osc().out() // executar esta primeira noise().mult(osc(10,0.1,10)).out() // experimente este arrays # Arrays (listas) em Hydra são uma coleção sequenciada de valores. Podem ser usadas para alterar vários parâmetros no tempo.</description>
     </item>
   </channel>

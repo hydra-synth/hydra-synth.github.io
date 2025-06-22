@@ -2,397 +2,397 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/src/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/src/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/guides/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/guides/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/arrays/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/arrays/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/getting-started/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/getting-started/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/</loc>
+    <loc>https://hydra.ojack.xyz/docs/</loc>
     <lastmod>2025-06-10T12:59:47-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/"
+                href="https://hydra.ojack.xyz/docs/ja/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/"
+                href="https://hydra.ojack.xyz/docs/pt/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/"
+                href="https://hydra.ojack.xyz/docs/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/quick-start/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/quick-start/</loc>
     <lastmod>2025-06-06T18:05:59-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/coord/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/coord/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/oscillator/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/oscillator/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/getting-started/oscillator/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/getting-started/oscillator/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/</loc>
     <lastmod>2025-06-10T13:00:19-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/docs/learning/"
+                href="https://hydra.ojack.xyz/docs/ja/docs/learning/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/docs/learning/"
+                href="https://hydra.ojack.xyz/docs/pt/docs/learning/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/docs/learning/"
+                href="https://hydra.ojack.xyz/docs/docs/learning/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/color/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/color/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/getting-started/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/getting-started/</loc>
     <lastmod>2025-06-10T13:00:19-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/docs/learning/getting-started/"
+                href="https://hydra.ojack.xyz/docs/pt/docs/learning/getting-started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/docs/learning/getting-started/"
+                href="https://hydra.ojack.xyz/docs/docs/learning/getting-started/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/web-editor/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/web-editor/</loc>
     <lastmod>2025-06-10T13:00:19-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/geometry-and-color/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/geometry-and-color/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/getting-started/geometry-and-color/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/getting-started/geometry-and-color/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/reference/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/reference/</loc>
     <lastmod>2023-11-21T12:25:38+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/</loc>
     <lastmod>2025-06-10T12:59:21-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/external-sources/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/external-sources/</loc>
     <lastmod>2025-06-10T13:00:19-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/posts/hello-world/</loc>
+    <loc>https://hydra.ojack.xyz/docs/posts/hello-world/</loc>
     <lastmod>2023-04-06T13:57:36+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/external-sources/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/external-sources/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/guides/textures/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/guides/textures/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/interactivity/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/interactivity/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/interactivity/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/interactivity/</loc>
     <lastmod>2023-11-17T18:58:46+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/how-to/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/how-to/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/sequencing/</loc>
     <lastmod>2025-06-10T12:59:02-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/webcam/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/webcam/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/getting-started/webcam/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/getting-started/webcam/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/web-editor/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/web-editor/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/video-synth-basics/web-editor/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/video-synth-basics/web-editor/</loc>
     <lastmod>2023-11-17T18:58:46+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/blending/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/blending/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/getting-started/blending/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/getting-started/blending/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/interactivity/</loc>
     <lastmod>2025-06-10T12:59:02-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/contributing/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/contributing/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/contributing/server/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/contributing/server/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/contributing/editor/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/contributing/editor/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/contributing/synth/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/contributing/synth/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/</loc>
     <lastmod>2025-06-10T13:05:21-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/src/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/src/</loc>
     <lastmod>2025-06-10T12:59:21-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/outputs/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/outputs/</loc>
     <lastmod>2025-06-10T12:59:21-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/transforms/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/transforms/</loc>
     <lastmod>2025-06-10T12:59:21-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/blending/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/blending/</loc>
     <lastmod>2025-06-10T12:59:21-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/modulate/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/modulate/</loc>
     <lastmod>2025-06-10T12:59:21-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/settings/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/settings/</loc>
     <lastmod>2025-06-10T12:59:21-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/arrays/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/sequencing/arrays/</loc>
     <lastmod>2025-06-10T12:59:02-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/arrow-functions/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/sequencing/arrow-functions/</loc>
     <lastmod>2025-06-10T12:59:02-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/mouse/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/interactivity/mouse/</loc>
     <lastmod>2025-06-10T13:11:37-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/audio/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/interactivity/audio/</loc>
     <lastmod>2025-06-10T12:59:02-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/midi/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/interactivity/midi/</loc>
     <lastmod>2025-06-10T12:59:02-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/extensions/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/extensions/</loc>
     <lastmod>2025-06-10T12:59:47-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/extending-hydra/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/extending-hydra/</loc>
     <lastmod>2025-06-10T12:59:47-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/glsl/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/glsl/</loc>
     <lastmod>2025-06-10T12:59:47-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/</loc>
     <lastmod>2025-06-10T12:59:47-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/javascript/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/javascript/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/automatic-patches/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/automatic-patches/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/frames-and-timing/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/frames-and-timing/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/textures/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/textures/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/audio/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/audio/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/event-listeners/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/event-listeners/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/how-to/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/how-to/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/editor/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/editor/</loc>
     <lastmod>2025-06-10T12:59:47-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/synth/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/synth/</loc>
     <lastmod>2025-06-10T12:59:47-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/server/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/server/</loc>
     <lastmod>2025-06-10T12:59:47-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/</loc>
     <lastmod>2025-06-10T13:11:37-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/docs/"
+                href="https://hydra.ojack.xyz/docs/ja/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/docs/"
+                href="https://hydra.ojack.xyz/docs/pt/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/docs/"
+                href="https://hydra.ojack.xyz/docs/docs/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/tags/grants/</loc>
+    <loc>https://hydra.ojack.xyz/docs/tags/grants/</loc>
     <lastmod>2023-11-21T18:58:36+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/posts/hydra-meetup-8/</loc>
+    <loc>https://hydra.ojack.xyz/docs/posts/hydra-meetup-8/</loc>
     <lastmod>2023-11-21T18:58:36+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/tags/meetup/</loc>
+    <loc>https://hydra.ojack.xyz/docs/tags/meetup/</loc>
     <lastmod>2023-11-21T18:58:36+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/tags/</loc>
+    <loc>https://hydra.ojack.xyz/docs/tags/</loc>
     <lastmod>2023-11-21T18:58:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/tags/"
+                href="https://hydra.ojack.xyz/docs/ja/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/tags/"
+                href="https://hydra.ojack.xyz/docs/pt/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/tags/"
+                href="https://hydra.ojack.xyz/docs/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/array/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/array/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/combine/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/combine/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/combinecoord/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/combinecoord/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/settings/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/settings/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/contributing_code/</loc>
+    <loc>https://hydra.ojack.xyz/docs/contributing_code/</loc>
     <lastmod>2023-11-15T19:44:43+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/contributing_translation/</loc>
+    <loc>https://hydra.ojack.xyz/docs/contributing_translation/</loc>
     <lastmod>2023-11-15T19:44:43+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/interactivity/arrays/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/interactivity/arrays/</loc>
     <lastmod>2023-11-17T18:58:46+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/interactivity/audio/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/interactivity/audio/</loc>
     <lastmod>2023-11-17T18:58:46+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/interactivity/midi/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/interactivity/midi/</loc>
     <lastmod>2023-11-17T18:58:46+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/audio/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/audio/</loc>
     <lastmod>2023-11-20T16:52:32+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/guides/color/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/guides/color/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/guides/feedback/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/guides/feedback/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/guides/frames-and-timing/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/guides/frames-and-timing/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/hydra-garden/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/hydra-garden/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/custom-glsl/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/custom-glsl/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/hydra-in-a-webpage/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/hydra-in-a-webpage/</loc>
     <lastmod>2025-03-15T11:52:42+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/interactivity/audio/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/interactivity/audio/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/interactivity/midi/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/interactivity/midi/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/posts/</loc>
+    <loc>https://hydra.ojack.xyz/docs/posts/</loc>
     <lastmod>2023-04-05T16:32:08+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/categories/</loc>
+    <loc>https://hydra.ojack.xyz/docs/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/categories/"
+                href="https://hydra.ojack.xyz/docs/ja/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/categories/"
+                href="https://hydra.ojack.xyz/docs/pt/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/categories/"
+                href="https://hydra.ojack.xyz/docs/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/community/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/community/</loc>
     <lastmod>2023-11-15T16:43:43+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/glsl/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/glsl/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/how-to/hydra-in-a-webpage/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/how-to/hydra-in-a-webpage/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_old/extending-hydra/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_old/extending-hydra/</loc>
     <lastmod>2023-11-17T18:58:46+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/guides/automatic-patches/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/guides/automatic-patches/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/guides/javascript/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/guides/javascript/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/how-to/record-hydra-output/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/how-to/record-hydra-output/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/how-to/record-hydra-output/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/how-to/record-hydra-output/</loc>
     <lastmod>2025-06-10T13:00:19-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/guides/how-to/use-hydra-without-showing-code/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/guides/how-to/use-hydra-without-showing-code/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning/guides/how-to/use-hydra-without-showing-code/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning/guides/how-to/use-hydra-without-showing-code/</loc>
     <lastmod>2025-06-10T12:58:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/extending-hydra/</loc>
+    <loc>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/extending-hydra/</loc>
     <lastmod>2023-11-20T16:19:06+01:00</lastmod>
   </url>
 </urlset>

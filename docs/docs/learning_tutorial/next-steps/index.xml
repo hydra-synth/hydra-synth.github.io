@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hydra video synth</title>
-    <link>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/</link>
+    <link>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/</link>
     <description>Recent content on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Change values over time using arrays and custom functions</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/arrays/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/arrays/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/arrays/</guid>
       <description>Sequencing using Arrays # If you&amp;rsquo;re coding in Hydra, you&amp;rsquo;re constantly trying many values to input to the sources and transforms, and it&amp;rsquo;s just a matter of time until you like how more than one looks, and you want to somehow switch between them. We&amp;rsquo;ll be referring to this idea of arguments whose value change over time as dynamic arguments. And there are two main ways to achieve this in Hydra: Arrays and functions.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/custom-glsl/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/custom-glsl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/custom-glsl/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/custom-glsl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/hydra-in-a-webpage/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/hydra-in-a-webpage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/hydra-in-a-webpage/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/hydra-in-a-webpage/</guid>
       <description>Hydra-Synth # In addition to using hydra within the hydra web editor, it is also possible to use the hydra video-synth engine as a library within your own javascript projects.&#xA;hydra-synth is a javascript library containing the main logic of hydra packaged as a javascript module.&#xA;To include in a webpage (bundled version): # Include the bundled version of hydra-synth in your html file:&#xA;&amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; // create a new hydra-synth instance var hydra = new Hydra({ detectAudio: false }) osc(4, 0.</description>
     </item>
     <item>
       <title>Custom GLSL</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/glsl/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/glsl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/glsl/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/glsl/</guid>
       <description>GLSL Guide # Using custom GLSL functions # Those more experienced with Hydra and/or digital visuals in general, might know that Hydra is built on WebGL and its shadering language, GLSL ES. Hydra has a unique way of adding custom source and transform functions which we will explain here.&#xA;setFunction # The Hydra API includes a function called setFunction which receives a specific type of JavaScript object. This object will have the properties name, type, inputs and glsl.</description>
     </item>
     <item>
       <title>Using hydra with other javascript libraries</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/extending-hydra/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/extending-hydra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/extending-hydra/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/extending-hydra/</guid>
       <description>Using hydra with other javascript libraries # Hydra is written in javascript, and compatible with many other javascript libraries. The hydra web editor executes javascript directly in the browser, so it is possible to load many other libraries and scripts directly in the browser.&#xA;p5.js # p5.js is a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!</description>
     </item>
   </channel>

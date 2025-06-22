@@ -2,108 +2,108 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/hydra-docs-v2/pt/docs/learning/getting-started/</loc>
+    <loc>https://hydra.ojack.xyz/docs/pt/docs/learning/getting-started/</loc>
     <lastmod>2025-06-10T12:50:52-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/docs/learning/getting-started/"
+                href="https://hydra.ojack.xyz/docs/docs/learning/getting-started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/docs/learning/getting-started/"
+                href="https://hydra.ojack.xyz/docs/pt/docs/learning/getting-started/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/pt/</loc>
+    <loc>https://hydra.ojack.xyz/docs/pt/</loc>
     <lastmod>2023-11-21T18:58:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/"
+                href="https://hydra.ojack.xyz/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/"
+                href="https://hydra.ojack.xyz/docs/ja/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/"
+                href="https://hydra.ojack.xyz/docs/pt/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/pt/docs/learning/</loc>
+    <loc>https://hydra.ojack.xyz/docs/pt/docs/learning/</loc>
     <lastmod>2023-11-21T18:58:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/docs/learning/"
+                href="https://hydra.ojack.xyz/docs/docs/learning/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/docs/learning/"
+                href="https://hydra.ojack.xyz/docs/ja/docs/learning/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/docs/learning/"
+                href="https://hydra.ojack.xyz/docs/pt/docs/learning/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/pt/categories/</loc>
+    <loc>https://hydra.ojack.xyz/docs/pt/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/categories/"
+                href="https://hydra.ojack.xyz/docs/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/categories/"
+                href="https://hydra.ojack.xyz/docs/ja/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/categories/"
+                href="https://hydra.ojack.xyz/docs/pt/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/pt/docs/</loc>
+    <loc>https://hydra.ojack.xyz/docs/pt/docs/</loc>
     <lastmod>2025-06-10T12:50:52-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/docs/"
+                href="https://hydra.ojack.xyz/docs/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/docs/"
+                href="https://hydra.ojack.xyz/docs/ja/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/docs/"
+                href="https://hydra.ojack.xyz/docs/pt/docs/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/pt/tags/</loc>
+    <loc>https://hydra.ojack.xyz/docs/pt/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hydra-docs-v2/tags/"
+                href="https://hydra.ojack.xyz/docs/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/hydra-docs-v2/ja/tags/"
+                href="https://hydra.ojack.xyz/docs/ja/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://localhost:1313/hydra-docs-v2/pt/tags/"
+                href="https://hydra.ojack.xyz/docs/pt/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/hydra-docs-v2/pt/docs/learning/additional-topics/</loc>
+    <loc>https://hydra.ojack.xyz/docs/pt/docs/learning/additional-topics/</loc>
     <lastmod>2023-11-21T18:58:36+01:00</lastmod>
   </url>
 </urlset>

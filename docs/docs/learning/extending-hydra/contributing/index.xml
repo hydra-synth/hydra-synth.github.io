@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>developing &amp; contributing on hydra video synth</title>
-    <link>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/</link>
+    <link>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/</link>
     <description>Recent content in developing &amp; contributing on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>editor</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/editor/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/editor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/editor/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/editor/</guid>
       <description>Developing editor # To run locally, you must have nodejs and npm installed. Install node and npm from: https://nodejs.org/en/.&#xA;First, clone the repository&#xA;git clone git@github.com:hydra-synth/hydra.git enter the directory of the hydra source code:&#xA;cd hydra Current main branch # The current main branch uses browserify to bundle the script. While new features should be implemented in dev branch, if there is a hot fix needed in the current main branch, please follow this guide.</description>
     </item>
     <item>
       <title>developing hydra-synth</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/synth/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/synth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/synth/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/synth/</guid>
       <description>Developing synth # Clone the repository&#xA;git@github.com:hydra-synth/hydra-synth.git enter the folder&#xA;cd hydra-synth install the dependencies&#xA;npm install build&#xA;npm run build The bundled code is in dist/hydra-synth.js.&#xA;Trying on the browser # This repository does not come with the editor. However, you can use the simple example dist/index.html. To do so, install http-server&#xA;npm install --global http-server and serve dist folder&#xA;http-server dist go to http://localhost:8000 in the browser. You can either edit the hydra code in index.</description>
     </item>
     <item>
       <title>backend server</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/server/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/contributing/server/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/extending-hydra/contributing/server/</guid>
       <description>backend server # Coming soon&amp;hellip;</description>
     </item>
   </channel>

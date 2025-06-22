@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>interactivity on hydra video synth</title>
-    <link>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/</link>
+    <link>https://hydra.ojack.xyz/docs/docs/learning/interactivity/</link>
     <description>Recent content in interactivity on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hydra.ojack.xyz/docs/docs/learning/interactivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mouse</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/mouse/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/interactivity/mouse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/mouse/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/interactivity/mouse/</guid>
       <description>mouse # You can have your visuals react to the position of your mouse (or finger, in touch devices). Hydra has an object called mouse which stores and keeps track of the position of your mouse on the webpage.&#xA;Important note # All of the examples using mouse position to move stuff on the canvas won&amp;rsquo;t work well here, since the canvas doesn&amp;rsquo;t occupy the full size of the screen.</description>
     </item>
     <item>
       <title>audio</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/audio/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/interactivity/audio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/audio/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/interactivity/audio/</guid>
       <description>audio # The current version of Hydra can use the default microphone as an input, it uses Meyda in order to analyze the sound and get values for audio reactivity. This works internally using the FFT algorithm.&#xA;the a object # The a object gives you access to all of the audio functionality. Please follow along on the Hydra editor:&#xA;a.show # Show the FFT bins near the canvas.</description>
     </item>
     <item>
       <title>midi</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/midi/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/interactivity/midi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/interactivity/midi/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/interactivity/midi/</guid>
       <description>midi # hydra-midi # hydra-midi is one of the most used extensions for Hydra. It allows you to easily incorporate MIDI devices into your patches. These can be MIDI interfaces, controllers, virtual cables, etc. It can use both notes and CC values. For more information visit the hydra-midi repository&#xA;Examples # Start-up # await loadScript(&amp;#39;https://cdn.jsdelivr.net/npm/hydra-midi@latest/dist/index.js&amp;#39;) // Use midi messages from all channels of all inputs. await midi.start().show() // Use specific inputs or channels seaboard = midi.</description>
     </item>
   </channel>
