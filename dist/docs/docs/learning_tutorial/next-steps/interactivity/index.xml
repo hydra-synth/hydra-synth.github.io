@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interactivity: mouse, audio, and MIDI on hydra video synth</title>
-    <link>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/interactivity/</link>
+    <link>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/interactivity/</link>
     <description>Recent content in Interactivity: mouse, audio, and MIDI on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/interactivity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/interactivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/interactivity/audio/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/interactivity/audio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/interactivity/audio/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/interactivity/audio/</guid>
       <description>Audio reactivity # FFT functionality is available via an audio object accessed via &amp;ldquo;a&amp;rdquo;. The editor uses https://github.com/meyda/meyda for audio analysis. To show the fft bins,&#xA;a.show() Set number of fft bins:&#xA;a.setBins(6) Access the value of the leftmost (lowest frequency) bin:&#xA;a.fft[0] Use the value to control a variable:&#xA;osc(10, 0, () =&amp;gt; a.fft[0]*4) .out() It is possible to calibrate the responsiveness by changing the minimum and maximum value detected.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/interactivity/midi/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/interactivity/midi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_tutorial/next-steps/interactivity/midi/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_tutorial/next-steps/interactivity/midi/</guid>
       <description>MIDI # Hydra can be used with Web MIDI for an extra layer of control to your visuals.&#xA;Example script: browser console # At this time this requires some running of code on the browser console (Press F12 in Chrome to access). This page only considers MIDI Continuous Controllers (CC) but other types of data may be accessible.&#xA;This is a generic script that doesn&amp;rsquo;t care what Midi Channel you&amp;rsquo;re broadcasting on and maps a normalized value 0.</description>
     </item>
   </channel>

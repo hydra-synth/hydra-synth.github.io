@@ -2,72 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hydra video synth</title>
-    <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/</link>
+    <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/</link>
     <description>Recent content on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sources</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/src/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/src/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/src/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/src/</guid>
       <description>Source # noise # noise( scale = 10, offset = 0.1 )&#xA;Generate Perlin noise.&#xA;voronoi # voronoi( scale = 5, speed = 0.3, blending = 0.3 )&#xA;Generate voronoi shapes.&#xA;osc # osc( frequency = 60, sync = 0.1, offset )&#xA;shape # shape( sides = 3, radius = 0.3, smoothing = 0.01 )&#xA;gradient # gradient( speed )&#xA;src # src( tex )&#xA;See hydra-examples repository&#xA;solid # solid( r, g, b, a = 1 )</description>
     </item>
     <item>
       <title>Geometry</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/coord/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/coord/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/coord/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/coord/</guid>
       <description>Geometry # rotate # rotate( angle = 10, speed )&#xA;Rotate texture.&#xA;scale # scale( amount = 1.5, xMult = 1, yMult = 1, offsetX = 0.5, offsetY = 0.5 )&#xA;Scale texture.&#xA;pixelate # pixelate( pixelX = 20, pixelY = 20 )&#xA;Pixelate texture with pixelX segments and pixelY segments.&#xA;repeat # repeat( repeatX = 3, repeatY = 3, offsetX, offsetY )&#xA;repeatX # repeatX( reps = 3, offset )</description>
     </item>
     <item>
       <title>Color</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/color/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/color/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/color/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/color/</guid>
       <description>Color # posterize # posterize( bins = 3, gamma = 0.6 )&#xA;shift # shift( r = 0.5, g, b, a )&#xA;invert # invert( amount = 1 )&#xA;Invert color.&#xA;contrast # contrast( amount = 1.6 )&#xA;Larger amount value makes higher contrast.&#xA;brightness # brightness( amount = 0.4 )&#xA;luma # luma( threshold = 0.5, tolerance = 0.1 )&#xA;thresh # thresh( threshold = 0.5, tolerance = 0.</description>
     </item>
     <item>
       <title>External sources</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/external-sources/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/external-sources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/external-sources/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/external-sources/</guid>
       <description>External Sources # Using the webcam # In addition to using sources from within hydra (such as osc() and shape()), you can use hydra to process external video sources such as a webcam. External sources in hydra are referenced using predefined objects s0, s1, s2, and s3. To initialize the webcam in s0, run the following code:&#xA;s0.initCam() This activates the webcam source inside a variable called s0, and you should see the light on your webcam light up.</description>
     </item>
     <item>
       <title>Array</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/array/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/array/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/array/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/array/</guid>
       <description>Arrays # Sequence your inputs # When you send an Array as an input, Hydra will automatically switch and jump from each element from the Array to the next one. When there are no more elements, it wraps all the way back to the beginning. Let&amp;rsquo;s see it in action:&#xA;As you can see, the fact that both these Arrays have a different amount of values doesn&amp;rsquo;t matter, Hydra will take values from each element of any Array for the same amount of time by default.</description>
     </item>
     <item>
       <title>Blend</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/combine/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/combine/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/combine/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/combine/</guid>
       <description>Blend # add # add( texture, amount = 1 )&#xA;Add textures. The texture parameter can be any kind of source, for example a color, src, or shape.&#xA;sub # sub( texture, amount = 1 )&#xA;layer # layer( texture )&#xA;Overlay texture based on alpha value. The texture parameter can be any kind of source, for example a color, src, or shape.&#xA;blend # blend( texture, amount = 0.</description>
     </item>
     <item>
       <title>Modulate</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/combinecoord/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/combinecoord/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/combinecoord/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/combinecoord/</guid>
       <description>Modulate # modulateRepeat # modulateRepeat( texture, repeatX = 3, repeatY = 3, offsetX = 0.5, offsetY = 0.5 )&#xA;The texture parameter can be any kind of source, for example a color, src, or shape.&#xA;modulateRepeatX # modulateRepeatX( texture, reps = 3, offset = 0.5 )&#xA;The texture parameter can be any kind of source, for example a color, src, or shape.&#xA;modulateRepeatY # modulateRepeatY( texture, reps = 3, offset = 0.</description>
     </item>
     <item>
       <title>Synth Settings</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/settings/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/settings/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/settings/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/settings/</guid>
       <description>Synth Settings # Functions and settings that affect overall hydra behavor and rendering.&#xA;render # render( texture = all )&#xA;// default osc(30,0.1,1.5).out(o0) noise().out(o1) solid(1).out(o2) gradient().out(o3) render() update # update( )&#xA;setResolution # setResolution( width, height )&#xA;// make the canvas small (100 pixel x 100 pixel) setResolution(100,100) osc().out(o0) hush # hush( )&#xA;// clear the buffers osc().out(o0) hush() setFunction # setFunction( options )&#xA;speed # speed = 1</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/audio/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/audio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/reference/api/audio/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/reference/api/audio/</guid>
       <description>Audio reactivity # FFT functionality is available via an audio object accessed via &amp;ldquo;a&amp;rdquo;. The editor uses https://github.com/meyda/meyda for audio analysis. To show the fft bins,&#xA;a.show() Set number of fft bins:&#xA;a.setBins(6) Access the value of the leftmost (lowest frequency) bin:&#xA;a.fft[0] Use the value to control a variable:&#xA;osc(10, 0, () =&amp;gt; a.fft[0]*4) .out() It is possible to calibrate the responsiveness by changing the minimum and maximum value detected.</description>
     </item>
   </channel>

@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getting Started on hydra video synth</title>
-    <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/</link>
+    <link>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/</link>
     <description>Recent content in Getting Started on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Drawing an oscillator</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/oscillator/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/oscillator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/oscillator/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/oscillator/</guid>
       <description>First line of code # Use the clear all button to erase the previous sketch.&#xA;Then, type or paste the following in the editor:&#xA;osc().out() Press the run button to run this code and update the visuals on the screen. You should see some scrolling stripes appear in the background. You can also edit the code directly on this page:&#xA;This creates a visual oscillator. Try modifying the parameters of the oscillator by putting a number inside the parentheses of osc(), for example osc(10).</description>
     </item>
     <item>
       <title>Geometry and color</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/geometry-and-color/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/geometry-and-color/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/geometry-and-color/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/geometry-and-color/</guid>
       <description>Adding transformations # We can add another transformation to the oscillator from above, by adding the function rotate() after the oscillator:&#xA;As you can see, you have first an input source osc() and things that come after (rotate() and out()) are connected with a dot ‘.’ In this sense, Hydra is inspired by modular synthesis. Instead of connecting cables you connect different kinds of javascript functions.&#xA;source Sandin Image Processor # You can continue adding transformations to this chain of functions.</description>
     </item>
     <item>
       <title>Webcam and video inputs</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/webcam/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/webcam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/webcam/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/webcam/</guid>
       <description>Using the webcam # In addition to using sources from within hydra (such as osc() and shape()), you can use hydra to process external video sources such as a webcam, video, or screen capture. To initialize the webcam, run the following code:&#xA;s0.initCam() This activates the webcam source inside a variable called s0, and you should see the light on your webcam light up. However, you will still not see the webcam image on the screen.</description>
     </item>
     <item>
       <title>Combining visuals using blending and modulation</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/blending/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/blending/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning_old/getting-started/blending/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning_old/getting-started/blending/</guid>
       <description>Combining visuals using blending and modulation # Multiple outputs # By default, hydra contains four separate virtual outputs that can each render different visuals, and can be mixed with each other to create more complex visuals. The variables o0, o1, o2, and o3 correspond to the different outputs.&#xA;To see all four of the outputs at once, use the render() function. This will divide the screen into four, showing each output in a different section of the screen.</description>
     </item>
   </channel>

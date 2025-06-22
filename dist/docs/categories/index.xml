@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on hydra video synth</title>
-    <link>http://localhost:1313/hydra-docs-v2/categories/</link>
+    <link>https://hydra.ojack.xyz/docs/categories/</link>
     <description>Recent content in Categories on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/hydra-docs-v2/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hydra.ojack.xyz/docs/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

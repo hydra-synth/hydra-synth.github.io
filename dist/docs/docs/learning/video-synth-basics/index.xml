@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>video synth basics on hydra video synth</title>
-    <link>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/</link>
+    <link>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/</link>
     <description>Recent content in video synth basics on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>sources</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/src/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/src/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/src/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/src/</guid>
       <description>sources # Sources are functions that generate video signals. These are the fundamental pieces of our visuals, we connect them to transforms and mix them with other functions in order to create our visuals. Using a musical analogy: sources are like instruments (guitars, oscillators, keyboards) and we connect them to transforms (effects) in order to create cool stuff.&#xA;Some source functions # osc # A visual oscillator, goes from black to white smoothly.</description>
     </item>
     <item>
       <title>outputs</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/outputs/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/outputs/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/outputs/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/outputs/</guid>
       <description>outputs # By default, hydra contains four separate virtual outputs that can each render different visuals, and can be mixed with each other to create more complex visuals. The variables o0, o1, o2, and o3 correspond to the different outputs.&#xA;The out function # The special Hydra function that allows us to output our visuals is called out.&#xA;out( output = o0 )&#xA;The src function # In the example above you can also see the src function, which allows use to access the video signals in framebuffers such as outputs or external sources.</description>
     </item>
     <item>
       <title>transforms</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/transforms/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/transforms/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/transforms/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/transforms/</guid>
       <description>transforms # Transforms are the functions that we can call over sources using dots. They are &amp;ldquo;effects&amp;rdquo; that we can apply to visuals and chain together. There are different type of transforms, the most basic ones being color and geometry.&#xA;Color transform Geometry transform Changes the content of pixels (its colors and their transparency) Changes the placement of pixels Some color transforms # Color transforms change the colors (the RGBA values) for all pixels in a texture.</description>
     </item>
     <item>
       <title>blending</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/blending/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/blending/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/blending/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/blending/</guid>
       <description>blending # Blend transforms allow you to combine the colors of two visual sources. There are many ways of operating with them. There are multiple blend modes in Hydra, similar to the blend modes you might find in raster graphics programs such as Photoshop or GNU-IMP. All blend functions take in a texture which can be a source, a patch or a framebuffer (such as o0, o1, s0, etc).</description>
     </item>
     <item>
       <title>modulation</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/modulate/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/modulate/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/modulate/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/modulate/</guid>
       <description>modulation # While blend functions combine the colors from two visual sources, modulate functions use the colors from one source to affect the geometry of the second source. This creates a sort of warping or distorting effect. An analogy in the real world would be looking through a texture glass window. modulate() does not change color or luminosity but distorts one visual source using another visual source. Note how modulation is to geometry what blending is to color.</description>
     </item>
     <item>
       <title>settings &amp; state</title>
-      <link>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/settings/</link>
+      <link>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/settings/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/settings/</guid>
+      <guid>https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/settings/</guid>
       <description>synth settings # Functions, variables, and settings that affect overall hydra behavior and rendering.&#xA;Global output # render # Chooses which output to show. If you don&amp;rsquo;t specify one, it will show all 4 outputs.&#xA;render( texture = all )&#xA;hush # Empties all outputs.&#xA;hush()&#xA;Time-related functions # time # Tells you the amount of time that has passed since the synth started working. Usually called inside arrow functions.</description>
     </item>
   </channel>
