@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
+<head><script src="/hydra-docs-v2/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hydra-docs-v2/livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="frames and timing # by geikha
+<meta name="description" content="Updating frames &amp; precise timing # by Geikha
 Using the update function # There&rsquo;s a function in the Hydra API called update. This function runs at the beginning of every frame render right before the values for time and a.fft are calculated. If you are familiar with Processing or p5, you can think of update as Hydra&rsquo;s equivalent to the draw function. Using update can be very useful for creating generative visuals (generative in the sense of controlling visual elements with values that evolve through time either randomly or following certain rules).">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="frames and timing # by geikha
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Updating frames &amp; precise timing" />
+<meta property="og:description" content="Updating frames &amp; precise timing # by Geikha
 Using the update function # There&rsquo;s a function in the Hydra API called update. This function runs at the beginning of every frame render right before the values for time and a.fft are calculated. If you are familiar with Processing or p5, you can think of update as Hydra&rsquo;s equivalent to the draw function. Using update can be very useful for creating generative visuals (generative in the sense of controlling visual elements with values that evolve through time either randomly or following certain rules)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hydra.ojack.xyz/docs/docs/learning/guides/frames-and-timing/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/hydra-docs-v2/docs/learning/guides/frames-and-timing/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-11-15T19:44:43+01:00" />
-<title>Frames and Timing | hydra video synth</title>
-<link rel="manifest" href="/docs/manifest.json">
-<link rel="icon" href="/docs/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/docs/book.min.9bac9dc478cf52ca962a4f35e004c2cdc70a5461e7451956af25f951f9749ded.css" integrity="sha256-m6ydxHjPUsqWKk814ATCzccKVGHnRRlWryX5Ufl0ne0=" crossorigin="anonymous">
-  <script defer src="/docs/flexsearch.min.js"></script>
-  <script defer src="/docs/en.search.min.c0cdc9f1af0017e9cdc0e9c2736f81073249da4606e0c6c7a58f5d45cae92ceb.js" integrity="sha256-wM3J8a8AF&#43;nNwOnCc2&#43;BBzJJ2kYG4MbHpY9dRcrpLOs=" crossorigin="anonymous"></script>
+<meta property="article:modified_time" content="2025-06-10T12:58:31-03:00" />
+
+<title>Updating frames &amp; precise timing | hydra video synth</title>
+<link rel="manifest" href="/hydra-docs-v2/manifest.json">
+<link rel="icon" href="/hydra-docs-v2/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/hydra-docs-v2/book.min.9bac9dc478cf52ca962a4f35e004c2cdc70a5461e7451956af25f951f9749ded.css" integrity="sha256-m6ydxHjPUsqWKk814ATCzccKVGHnRRlWryX5Ufl0ne0=" crossorigin="anonymous">
+  <script defer src="/hydra-docs-v2/flexsearch.min.js"></script>
+  <script defer src="/hydra-docs-v2/en.search.min.3f0bed049a5592f5f43fd6d6e8cd9c2eceb3f7b6f07548b60a5c9d8d19caea1e.js" integrity="sha256-PwvtBJpVkvX0P9bW6M2cLs6z97bwdUi2ClydjRnK6h4=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -65,7 +66,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/comment/comm
 crossorigin="anonymous"
 ></script>
 <script src="https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js"></script>
-<script src="https://hydra.ojack.xyz/docs/js/hydra-torus-editor.js"></script>
+<script src="http://localhost:1313/hydra-docs-v2//js/hydra-torus-editor.js"></script>
 </head>
 <body dir="ltr">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
@@ -76,7 +77,7 @@ crossorigin="anonymous"
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="/docs/"><span>hydra video synth</span>
+  <a class="flex align-center" href="/hydra-docs-v2/"><span>hydra video synth</span>
   </a>
 </h2>
 
@@ -106,7 +107,7 @@ crossorigin="anonymous"
     <input type="checkbox" id="languages" class="toggle" />
     <label for="languages" class="flex justify-between">
       <a role="button" class="flex align-center">
-        <img src="/docs/svg/translate.svg" class="book-icon" alt="Languages" />
+        <img src="/hydra-docs-v2/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>
     </label>
@@ -114,13 +115,13 @@ crossorigin="anonymous"
     <ul>
       
       <li>
-        <a href="https://hydra.ojack.xyz/docs/ja/">
+        <a href="http://localhost:1313/hydra-docs-v2/ja/">
           日本語
         </a>
       </li>
       
       <li>
-        <a href="https://hydra.ojack.xyz/docs/pt/">
+        <a href="http://localhost:1313/hydra-docs-v2/pt/">
           Portuguese | Português
         </a>
       </li>
@@ -153,7 +154,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/quick-start/" class="">Quick start</a>
+    <a href="/hydra-docs-v2/docs/quick-start/" class="">quick start</a>
   
 
         </li>
@@ -166,9 +167,9 @@ crossorigin="anonymous"
   
 
   
-    <input type="checkbox" id="section-7cd66bd2d565ae5bb3c71a81f3ddbfa3" class="toggle" checked />
-    <label for="section-7cd66bd2d565ae5bb3c71a81f3ddbfa3" class="flex justify-between">
-      <a href="/docs/docs/learning/" class="">learning</a>
+    <input type="checkbox" id="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="toggle" checked />
+    <label for="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/" class="">learning</a>
     </label>
   
 
@@ -182,7 +183,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/getting-started/" class="">Getting started</a>
+    <a href="/hydra-docs-v2/docs/learning/getting-started/" class="">getting started</a>
   
 
         </li>
@@ -195,7 +196,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/web-editor/" class="">Using the web editor</a>
+    <a href="/hydra-docs-v2/docs/learning/web-editor/" class="">web editor</a>
   
 
         </li>
@@ -208,201 +209,9 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/video-synth-basics/" class="">Video Synth Basics</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/src/" class="">Sources</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/coord/" class="">Geometry</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/color/" class="">Color</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/external-sources/" class="">External sources: webcam, video, canvas</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/combine/" class="">Blend</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/combinecoord/" class="">Modulate</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/settings/" class="">Synth Settings</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/" class="">Sequencing &amp; interactivity</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/arrays/" class="">Arrays</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/audio/" class="">Audio</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/midi/" class="">Midi</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/mouse/" class="">Mouse</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <span>Extending Hydra</span>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-14148bd41cd0b3003e4e88b693e6efb2" class="toggle"  />
-    <label for="section-14148bd41cd0b3003e4e88b693e6efb2" class="flex justify-between">
-      <a href="/docs/docs/learning/extending-hydra/contributing/" class="">Developing and contributing</a>
+    <input type="checkbox" id="section-abc558a55caa3a21197cd84f6409f58d" class="toggle"  />
+    <label for="section-abc558a55caa3a21197cd84f6409f58d" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/video-synth-basics/" class="">video synth basics</a>
     </label>
   
 
@@ -416,10 +225,7 @@ crossorigin="anonymous"
   
 
   
-    <input type="checkbox" id="section-b494ecce649985cd11b51836e5d7e9e1" class="toggle"  />
-    <label for="section-b494ecce649985cd11b51836e5d7e9e1" class="flex justify-between">
-      <a href="/docs/docs/learning/extending-hydra/contributing/server/" class="">developing backend server</a>
-    </label>
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/src/" class="">sources</a>
   
 
         </li>
@@ -432,10 +238,7 @@ crossorigin="anonymous"
   
 
   
-    <input type="checkbox" id="section-3624bfb3c585323e1150e68f68ae751f" class="toggle"  />
-    <label for="section-3624bfb3c585323e1150e68f68ae751f" class="flex justify-between">
-      <a href="/docs/docs/learning/extending-hydra/contributing/editor/" class="">developing editor</a>
-    </label>
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/outputs/" class="">outputs</a>
   
 
         </li>
@@ -448,10 +251,46 @@ crossorigin="anonymous"
   
 
   
-    <input type="checkbox" id="section-fbb2c3034da361fe243cc053f44f1c5c" class="toggle"  />
-    <label for="section-fbb2c3034da361fe243cc053f44f1c5c" class="flex justify-between">
-      <a href="/docs/docs/learning/extending-hydra/contributing/synth/" class="">developing hydra-synth</a>
-    </label>
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/transforms/" class="">transforms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/blending/" class="">blending</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/modulate/" class="">modulation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/settings/" class="">settings &amp; state</a>
   
 
         </li>
@@ -469,7 +308,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/extending-hydra/hydra-in-a-webpage/" class="">Hydra in a Webpage</a>
+    <a href="/hydra-docs-v2/docs/learning/external-sources/" class="">external sources</a>
   
 
         </li>
@@ -482,40 +321,9 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/extending-hydra/glsl/" class="">Custom GLSL</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/extending-hydra/extending-hydra/" class="">Using hydra with other javascript libraries</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-98f737d6280aa80f0960850113126c26" class="toggle" checked />
-    <label for="section-98f737d6280aa80f0960850113126c26" class="flex justify-between">
-      <a href="/docs/docs/learning/guides/" class="">Guides</a>
+    <input type="checkbox" id="section-eca88cb65a773793437f0e9114baf99c" class="toggle"  />
+    <label for="section-eca88cb65a773793437f0e9114baf99c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/sequencing/" class="">sequencing</a>
     </label>
   
 
@@ -529,7 +337,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/textures/" class="">Hydra Book: Textures</a>
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrays/" class="">arrays</a>
   
 
         </li>
@@ -542,7 +350,28 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/how-to/" class="">How to</a>
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrow-functions/" class="">arrow functions</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e9c592a536d885dc59f7d3443e5419c" class="toggle"  />
+    <label for="section-9e9c592a536d885dc59f7d3443e5419c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/interactivity/" class="">interactivity</a>
+    </label>
   
 
           
@@ -555,7 +384,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/how-to/record-hydra-output/" class="">Record hydra&#39;s output</a>
+    <a href="/hydra-docs-v2/docs/learning/interactivity/mouse/" class="">mouse</a>
   
 
         </li>
@@ -568,29 +397,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/how-to/use-hydra-without-showing-code/" class="">Use hydra without showing the code</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-    
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/guides/frames-and-timing/" class="active">Frames and Timing</a>
+    <a href="/hydra-docs-v2/docs/learning/interactivity/audio/" class="">audio</a>
   
 
         </li>
@@ -603,39 +410,8 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/hydra-garden/" class="">Hydra Garden</a>
+    <a href="/hydra-docs-v2/docs/learning/interactivity/midi/" class="">midi</a>
   
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/guides/automatic-patches/" class="">Iteration: automatically generate patches</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/guides/javascript/" class="">javascript for hydra users</a>
-  
-
-        </li>
-      
-    
-  </ul>
 
         </li>
       
@@ -652,7 +428,23 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/reference/" class="">reference</a>
+    <input type="checkbox" id="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="toggle"  />
+    <label for="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="flex justify-between">
+      <a role="button" class="">extending</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extensions/" class="">extensions</a>
   
 
         </li>
@@ -665,7 +457,275 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/community/" class="">community</a>
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extending-hydra/" class="">other libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/glsl/" class="">custom glsl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8afa17f34011c70734ab422498c11155" class="toggle"  />
+    <label for="section-8afa17f34011c70734ab422498c11155" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/" class="">developing &amp; contributing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/editor/" class="">editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/synth/" class="">developing hydra-synth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/server/" class="">backend server</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a7f0265de67bb55990b78cc970db95f" class="toggle" checked />
+    <label for="section-5a7f0265de67bb55990b78cc970db95f" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/guides/" class="">guides</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/javascript/" class="">JavaScript for Hydra users</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/automatic-patches/" class="">Iteration &amp; generative patches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/frames-and-timing/" class="active">Updating frames &amp; precise timing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/textures/" class="">Textures [Hydra Book]</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/audio/" class="">Audio-reactivity explained</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/event-listeners/" class="">Clicks &amp; keys</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0eb140a6ac0de442b2f42574663cfb56" class="toggle"  />
+    <label for="section-0eb140a6ac0de442b2f42574663cfb56" class="flex justify-between">
+      <a role="button" class="">How to...</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/hydra-in-a-webpage/" class="">Embed Hydra on your webpage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/record-hydra-output/" class="">Record Hydra&#39;s output</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/use-hydra-without-showing-code/" class="">Use Hydra without showing the code</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/reference/" class="">reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/community/" class="">community</a>
   
 
         </li>
@@ -687,7 +747,7 @@ crossorigin="anonymous"
 <ul>
   
   <li>
-    <a href="/docs/posts/"  >
+    <a href="/hydra-docs-v2/posts/"  >
         blog
       </a>
   </li>
@@ -728,14 +788,14 @@ crossorigin="anonymous"
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/docs/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/hydra-docs-v2/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Frames and Timing</strong>
+  <strong>Updating frames &amp; precise timing</strong>
 
   <label for="toc-control">
     
-    <img src="/docs/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/hydra-docs-v2/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
@@ -765,11 +825,12 @@ crossorigin="anonymous"
 
       
       
-  <article class="markdown"><h1 id="frames-and-timing">
-  frames and timing
-  <a class="anchor" href="#frames-and-timing">#</a>
+  <article class="markdown"><h1 id="updating-frames--precise-timing">
+  Updating frames &amp; precise timing
+  <a class="anchor" href="#updating-frames--precise-timing">#</a>
 </h1>
-<p>by geikha</p>
+<hr>
+<p>by Geikha</p>
 <h2 id="using-the-update-function">
   Using the update function
   <a class="anchor" href="#using-the-update-function">#</a>
@@ -890,9 +951,9 @@ It is also worth noting that the function receives a <code>dt</code> argument, w
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/8aa44259c129c39c0137f9c8cd40c558b0317422" title='Last modified by ojack | November 15, 2023' target="_blank" rel="noopener">
-      <img src="/docs/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 15, 2023</span>
+  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/97f4da0f92468b077f874d6f7ae1d91334ea734a" title='Last modified by Renzo Torr- | June 10, 2025' target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>June 10, 2025</span>
     </a>
   </div>
 
@@ -900,7 +961,7 @@ It is also worth noting that the function receives a <code>dt</code> argument, w
 
   <div>
     <a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/edit/main/content/docs/learning/guides/frames-and-timing.md" target="_blank" rel="noopener">
-      <img src="/docs/svg/edit.svg" class="book-icon" alt="Edit" />
+      <img src="/hydra-docs-v2/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>Edit this page</span>
     </a>
   </div>

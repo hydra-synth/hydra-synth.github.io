@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/hydra-docs-v2/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hydra-docs-v2/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="extensions # The Hydra community has put together many hydra-synth extensions which you can load into your sketches. This can be done using the loadScript function. Some of them add more sources, transforms, others have more intricate functionalities. There&rsquo;s also a repository of extensions which you can load easily inside the editor by pressing the puzzle piece icon. Here we present some of the most used extensions:
+hydra-midi # by Arnoson # hydra-midi is one of the most used extensions for Hydra.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="extensions" />
+<meta property="og:description" content="extensions # The Hydra community has put together many hydra-synth extensions which you can load into your sketches. This can be done using the loadScript function. Some of them add more sources, transforms, others have more intricate functionalities. There&rsquo;s also a repository of extensions which you can load easily inside the editor by pressing the puzzle piece icon. Here we present some of the most used extensions:
+hydra-midi # by Arnoson # hydra-midi is one of the most used extensions for Hydra." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/hydra-docs-v2/docs/learning/extending-hydra/extensions/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2025-06-10T12:59:47-03:00" />
+
+<title>extensions | hydra video synth</title>
+<link rel="manifest" href="/hydra-docs-v2/manifest.json">
+<link rel="icon" href="/hydra-docs-v2/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/hydra-docs-v2/book.min.9bac9dc478cf52ca962a4f35e004c2cdc70a5461e7451956af25f951f9749ded.css" integrity="sha256-m6ydxHjPUsqWKk814ATCzccKVGHnRRlWryX5Ufl0ne0=" crossorigin="anonymous">
+  <script defer src="/hydra-docs-v2/flexsearch.min.js"></script>
+  <script defer src="/hydra-docs-v2/en.search.min.3f0bed049a5592f5f43fd6d6e8cd9c2eceb3f7b6f07548b60a5c9d8d19caea1e.js" integrity="sha256-PwvtBJpVkvX0P9bW6M2cLs6z97bwdUi2ClydjRnK6h4=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.css"
+integrity="sha512-MWdvo/Qqcf4pY1ecQUB1uBn0qLp19U/qJ1Rpp2BDZeuBA7YsFEwkvqR/+aG4BroPiAYDunKJ6X8R/Pmdt3p7oA=="
+crossorigin="anonymous"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/show-hint.min.css"
+crossorigin="anonymous"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/paraiso-dark.min.css"
+crossorigin="anonymous"
+/>
+<script src="https://cdn.jsdelivr.net/npm/torus-dom/dist/index.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/javascript-hint.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/show-hint.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/selection/mark-selection.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/comment/comment.min.js"
+crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js"></script>
+<script src="http://localhost:1313/hydra-docs-v2//js/hydra-torus-editor.js"></script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/hydra-docs-v2/"><span>hydra video synth</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/hydra-docs-v2/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="http://localhost:1313/hydra-docs-v2/ja/">
+          日本語
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:1313/hydra-docs-v2/pt/">
+          Portuguese | Português
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/quick-start/" class="">quick start</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="toggle" checked />
+    <label for="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/" class="">learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/getting-started/" class="">getting started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/web-editor/" class="">web editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-abc558a55caa3a21197cd84f6409f58d" class="toggle"  />
+    <label for="section-abc558a55caa3a21197cd84f6409f58d" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/video-synth-basics/" class="">video synth basics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/src/" class="">sources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/outputs/" class="">outputs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/transforms/" class="">transforms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/blending/" class="">blending</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/modulate/" class="">modulation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/settings/" class="">settings &amp; state</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/external-sources/" class="">external sources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eca88cb65a773793437f0e9114baf99c" class="toggle"  />
+    <label for="section-eca88cb65a773793437f0e9114baf99c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/sequencing/" class="">sequencing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrays/" class="">arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrow-functions/" class="">arrow functions</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e9c592a536d885dc59f7d3443e5419c" class="toggle"  />
+    <label for="section-9e9c592a536d885dc59f7d3443e5419c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/interactivity/" class="">interactivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/mouse/" class="">mouse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/audio/" class="">audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/midi/" class="">midi</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="toggle" checked />
+    <label for="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="flex justify-between">
+      <a role="button" class="">extending</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extensions/" class="active">extensions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extending-hydra/" class="">other libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/glsl/" class="">custom glsl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8afa17f34011c70734ab422498c11155" class="toggle"  />
+    <label for="section-8afa17f34011c70734ab422498c11155" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/" class="">developing &amp; contributing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/editor/" class="">editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/synth/" class="">developing hydra-synth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/server/" class="">backend server</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a7f0265de67bb55990b78cc970db95f" class="toggle"  />
+    <label for="section-5a7f0265de67bb55990b78cc970db95f" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/guides/" class="">guides</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/javascript/" class="">JavaScript for Hydra users</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/automatic-patches/" class="">Iteration &amp; generative patches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/frames-and-timing/" class="">Updating frames &amp; precise timing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/textures/" class="">Textures [Hydra Book]</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/audio/" class="">Audio-reactivity explained</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/event-listeners/" class="">Clicks &amp; keys</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0eb140a6ac0de442b2f42574663cfb56" class="toggle"  />
+    <label for="section-0eb140a6ac0de442b2f42574663cfb56" class="flex justify-between">
+      <a role="button" class="">How to...</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/hydra-in-a-webpage/" class="">Embed Hydra on your webpage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/record-hydra-output/" class="">Record Hydra&#39;s output</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/use-hydra-without-showing-code/" class="">Use Hydra without showing the code</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/reference/" class="">reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/community/" class="">community</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/hydra-docs-v2/posts/"  >
+        blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://opencollective.com/hydra-synth"  target="_blank" rel="noopener">
+        contribute
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://hydra.ojack.xyz/grants"  target="_blank" rel="noopener">
+        grants
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/hydra-docs-v2/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>extensions</strong>
+
+  <label for="toc-control">
+    
+    <img src="/hydra-docs-v2/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hydra-midi">hydra-midi</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#hyper-hydra">hyper-hydra</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#extra-shaders-for-hydra">Extra shaders for Hydra</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="extensions">
+  extensions
+  <a class="anchor" href="#extensions">#</a>
+</h1>
+<p>The Hydra community has put together many <code>hydra-synth</code> extensions which you can load into your sketches. This can be done using the <code>loadScript</code> function. Some of them add more sources, transforms, others have more intricate functionalities. There&rsquo;s also a <a href="https://github.com/hydra-synth/hydra-extensions">repository of extensions</a> which you can load easily inside the editor by pressing the puzzle piece icon. Here we present some of the most used extensions:</p>
+<hr>
+<h2 id="hydra-midi">
+  hydra-midi
+  <a class="anchor" href="#hydra-midi">#</a>
+</h2>
+<h5 id="by-arnoson">
+  by Arnoson
+  <a class="anchor" href="#by-arnoson">#</a>
+</h5>
+<p><code>hydra-midi</code> is one of the most used extensions for Hydra. It allows you to easily incorporate MIDI devices into your patches. These can be MIDI interfaces, controllers, virtual cables, etc. It can use both notes and CC values. For more information visit the <a href="https://github.com/arnoson/hydra-midi">hydra-midi repository</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#39;https://cdn.jsdelivr.net/npm/hydra-midi@latest/dist/index.js&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">midi</span>.<span style="color:#a6e22e">start</span>().<span style="color:#a6e22e">show</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">osc</span>(<span style="color:#ae81ff">30</span>,.<span style="color:#ae81ff">01</span>).<span style="color:#a6e22e">invert</span>(<span style="color:#a6e22e">note</span>(<span style="color:#e6db74">&#39;C4&#39;</span>)).<span style="color:#a6e22e">out</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">osc</span>().<span style="color:#a6e22e">rotate</span>(<span style="color:#a6e22e">cc</span>(<span style="color:#ae81ff">45</span>).<span style="color:#a6e22e">range</span>(<span style="color:#ae81ff">0</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)).<span style="color:#a6e22e">out</span>(<span style="color:#a6e22e">o1</span>)
+</span></span></code></pre></div><hr>
+<h2 id="hyper-hydra">
+  hyper-hydra
+  <a class="anchor" href="#hyper-hydra">#</a>
+</h2>
+<h5 id="by-geikha">
+  by Geikha
+  <a class="anchor" href="#by-geikha">#</a>
+</h5>
+<p><code>hyper-hydra</code> is a pack of diverse &ldquo;hyper-usable hydra extensions&rdquo;. The functionalities are quite varied, here&rsquo;s a list of the most important ones. Learn more about it in <a href="https://github.com/geikha/hyper-hydra">its repository</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-arithmetics">hydra-arithmetics</a></td>
+<td>All the functions you need to make complex visual arithmetics.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-arrays">hydra-arrays</a></td>
+<td>Extends the functionality of arrays in Hydra, letting you operate between different arrays and generate new ones.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-blend">hydra-blend</a></td>
+<td>Adds most blending modes you know from raster image softwares. Ideal for compositing.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-colorspaces">hydra-colorspaces</a></td>
+<td>Work with color in different colorspaces such as CMYK, HSV, YUV, etc.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-convolutions">hydra-convolutions</a></td>
+<td>Adds many convolutions such as sharpen, blur, sobel and more, as well as functions for creating your own.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-gif">hydra-gif</a></td>
+<td>Load GIFs inside Hydra!</td>
+</tr>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-glsl">hydra-glsl</a></td>
+<td>Write GLSL code directly between patches</td>
+</tr>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-outputs">hydra-outputs</a></td>
+<td>Change the properties of Hydra&rsquo;s outputs&rsquo; framebuffers such as interpolation.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-src">hydra-src</a></td>
+<td>Adds alternative <code>src</code> functions which take into account the source&rsquo;s aspect ratio or absolute size. Also adds <code>rotateRel</code> to rotate without distortion.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/geikha/hyper-hydra#hydra-text">hydra-text</a></td>
+<td>Adds a simple text generator to Hydra!</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="extra-shaders-for-hydra">
+  Extra shaders for Hydra
+  <a class="anchor" href="#extra-shaders-for-hydra">#</a>
+</h2>
+<h5 id="by-thomas-jourdan">
+  by Thomas Jourdan
+  <a class="anchor" href="#by-thomas-jourdan">#</a>
+</h5>
+<p>Thomas&rsquo; own extension pack is widely used since it adds many useful functions to Hydra. You can learn more about it on <a href="https://gitlab.com/metagrowing/extra-shaders-for-hydra">its repository</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://gitlab.com/metagrowing/extra-shaders-for-hydra/-/blob/main/gallery/pattern/README.md">Op-art patterns</a></td>
+<td>New source functions inspired by op-art patterns.</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/metagrowing/extra-shaders-for-hydra/-/blob/main/gallery/softpattern/README.md">Soft patterns</a></td>
+<td>New source function which generate patterns with smooth transitions.</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/metagrowing/extra-shaders-for-hydra/-/blob/main/gallery/color/README.md">Color filters</a></td>
+<td>Additional filters for mixing or manipulating colors.</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/metagrowing/extra-shaders-for-hydra/-/blob/main/gallery/color/README.md">Noise</a></td>
+<td>Adds more types of noise to Hydra, including static, multi-octave perlin noise, domain-warping noise, and more.</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/metagrowing/extra-shaders-for-hydra/-/blob/main/gallery/screenspace/README.md">Screen space filters</a></td>
+<td>Used only in the last stage of the filter pipeline, they add typical renderpass effects such as blurring and dithering. There is also the related <code>hydra-convolutions</code> extension for a different code approach.</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/metagrowing/extra-shaders-for-hydra/-/blob/main/gallery/wave/README.md">Basic periodic functions</a></td>
+<td>Adds more simple periodic patterns (oscillators), such as a triangle wave, a square wave and a sawtooth wave.</td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/368f1f84eb97b3b0b109a921a6a96b4ec6252d20" title='Last modified by Renzo Torr- | June 10, 2025' target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>June 10, 2025</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/edit/main/content/docs/learning/extending-hydra/extensions.md" target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hydra-midi">hydra-midi</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#hyper-hydra">hyper-hydra</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#extra-shaders-for-hydra">Extra shaders for Hydra</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

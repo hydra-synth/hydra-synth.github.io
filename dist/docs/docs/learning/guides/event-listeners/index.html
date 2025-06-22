@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/hydra-docs-v2/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hydra-docs-v2/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Using clicks &amp; keyboard presses in Hydra # by Geikha
+Using JavaScript event listeners # Browsers have implemented in them a system of events which allows them to do X when Y happens. More concretely, this means we can define functions that will be run whenever a given event happens. Some examples of events are click (when a mouse click happens), resize (when the browser&rsquo;s window is resized), keydown (when a keyboard key is pressed down), load (when the webpage and its resources have been loaded), etc.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Clicks &amp; keys" />
+<meta property="og:description" content="Using clicks &amp; keyboard presses in Hydra # by Geikha
+Using JavaScript event listeners # Browsers have implemented in them a system of events which allows them to do X when Y happens. More concretely, this means we can define functions that will be run whenever a given event happens. Some examples of events are click (when a mouse click happens), resize (when the browser&rsquo;s window is resized), keydown (when a keyboard key is pressed down), load (when the webpage and its resources have been loaded), etc." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/hydra-docs-v2/docs/learning/guides/event-listeners/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2025-06-10T12:58:31-03:00" />
+
+<title>Clicks &amp; keys | hydra video synth</title>
+<link rel="manifest" href="/hydra-docs-v2/manifest.json">
+<link rel="icon" href="/hydra-docs-v2/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/hydra-docs-v2/book.min.9bac9dc478cf52ca962a4f35e004c2cdc70a5461e7451956af25f951f9749ded.css" integrity="sha256-m6ydxHjPUsqWKk814ATCzccKVGHnRRlWryX5Ufl0ne0=" crossorigin="anonymous">
+  <script defer src="/hydra-docs-v2/flexsearch.min.js"></script>
+  <script defer src="/hydra-docs-v2/en.search.min.3f0bed049a5592f5f43fd6d6e8cd9c2eceb3f7b6f07548b60a5c9d8d19caea1e.js" integrity="sha256-PwvtBJpVkvX0P9bW6M2cLs6z97bwdUi2ClydjRnK6h4=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.css"
+integrity="sha512-MWdvo/Qqcf4pY1ecQUB1uBn0qLp19U/qJ1Rpp2BDZeuBA7YsFEwkvqR/+aG4BroPiAYDunKJ6X8R/Pmdt3p7oA=="
+crossorigin="anonymous"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/show-hint.min.css"
+crossorigin="anonymous"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/paraiso-dark.min.css"
+crossorigin="anonymous"
+/>
+<script src="https://cdn.jsdelivr.net/npm/torus-dom/dist/index.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/javascript-hint.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/show-hint.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/selection/mark-selection.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/comment/comment.min.js"
+crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js"></script>
+<script src="http://localhost:1313/hydra-docs-v2//js/hydra-torus-editor.js"></script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/hydra-docs-v2/"><span>hydra video synth</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/hydra-docs-v2/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="http://localhost:1313/hydra-docs-v2/ja/">
+          日本語
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:1313/hydra-docs-v2/pt/">
+          Portuguese | Português
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/quick-start/" class="">quick start</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="toggle" checked />
+    <label for="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/" class="">learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/getting-started/" class="">getting started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/web-editor/" class="">web editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-abc558a55caa3a21197cd84f6409f58d" class="toggle"  />
+    <label for="section-abc558a55caa3a21197cd84f6409f58d" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/video-synth-basics/" class="">video synth basics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/src/" class="">sources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/outputs/" class="">outputs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/transforms/" class="">transforms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/blending/" class="">blending</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/modulate/" class="">modulation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/settings/" class="">settings &amp; state</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/external-sources/" class="">external sources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eca88cb65a773793437f0e9114baf99c" class="toggle"  />
+    <label for="section-eca88cb65a773793437f0e9114baf99c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/sequencing/" class="">sequencing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrays/" class="">arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrow-functions/" class="">arrow functions</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e9c592a536d885dc59f7d3443e5419c" class="toggle"  />
+    <label for="section-9e9c592a536d885dc59f7d3443e5419c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/interactivity/" class="">interactivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/mouse/" class="">mouse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/audio/" class="">audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/midi/" class="">midi</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="toggle"  />
+    <label for="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="flex justify-between">
+      <a role="button" class="">extending</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extensions/" class="">extensions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extending-hydra/" class="">other libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/glsl/" class="">custom glsl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8afa17f34011c70734ab422498c11155" class="toggle"  />
+    <label for="section-8afa17f34011c70734ab422498c11155" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/" class="">developing &amp; contributing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/editor/" class="">editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/synth/" class="">developing hydra-synth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/server/" class="">backend server</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a7f0265de67bb55990b78cc970db95f" class="toggle" checked />
+    <label for="section-5a7f0265de67bb55990b78cc970db95f" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/guides/" class="">guides</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/javascript/" class="">JavaScript for Hydra users</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/automatic-patches/" class="">Iteration &amp; generative patches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/frames-and-timing/" class="">Updating frames &amp; precise timing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/textures/" class="">Textures [Hydra Book]</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/audio/" class="">Audio-reactivity explained</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/event-listeners/" class="active">Clicks &amp; keys</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0eb140a6ac0de442b2f42574663cfb56" class="toggle"  />
+    <label for="section-0eb140a6ac0de442b2f42574663cfb56" class="flex justify-between">
+      <a role="button" class="">How to...</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/hydra-in-a-webpage/" class="">Embed Hydra on your webpage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/record-hydra-output/" class="">Record Hydra&#39;s output</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/use-hydra-without-showing-code/" class="">Use Hydra without showing the code</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/reference/" class="">reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/community/" class="">community</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/hydra-docs-v2/posts/"  >
+        blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://opencollective.com/hydra-synth"  target="_blank" rel="noopener">
+        contribute
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://hydra.ojack.xyz/grants"  target="_blank" rel="noopener">
+        grants
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/hydra-docs-v2/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Clicks &amp; keys</strong>
+
+  <label for="toc-control">
+    
+    <img src="/hydra-docs-v2/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#using-javascript-event-listeners">Using JavaScript event listeners</a>
+      <ul>
+        <li><a href="#click-pointerdown-and-pointerup">click, pointerdown and pointerup</a></li>
+        <li><a href="#keydown--keyup">keydown &amp; keyup</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="using-clicks--keyboard-presses-in-hydra">
+  Using clicks &amp; keyboard presses in Hydra
+  <a class="anchor" href="#using-clicks--keyboard-presses-in-hydra">#</a>
+</h1>
+<hr>
+<p>by Geikha</p>
+<h2 id="using-javascript-event-listeners">
+  Using JavaScript event listeners
+  <a class="anchor" href="#using-javascript-event-listeners">#</a>
+</h2>
+<p>Browsers have implemented in them a system of events which allows them to do X when Y happens. More concretely, this means we can define functions that will be run whenever a given event happens. Some examples of events are <code>click</code> (when a mouse click happens), <code>resize</code> (when the browser&rsquo;s window is resized), <code>keydown</code> (when a keyboard key is pressed down), <code>load</code> (when the webpage and its resources have been loaded), etc.
+We call each function we assign to an event an &ldquo;event listener&rdquo;. And there are to ways to add event listeners to our Hydra instance (or in any webpage):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, (<span style="color:#a6e22e">event</span>) =&gt; {});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">event</span>) =&gt; { };
+</span></span></code></pre></div><p>We&rsquo;ll be using the latter in the next examples since it&rsquo;s shorter. The former can allow you to add many listeners for the same event, but we don&rsquo;t really need that as much in Hydra, although you might find cool things to do with them!
+All event listeners have one parameter, which here we conveniently called <code>event</code>, where we receive an object representing the event and useful data about it. For example, a <code>click</code> event includes data about the position the click was done, if the alt or ctrl keys were pressed while clicking, etc. You can ignore it if you won&rsquo;t use values from it.</p>
+<h3 id="click-pointerdown-and-pointerup">
+  click, pointerdown and pointerup
+  <a class="anchor" href="#click-pointerdown-and-pointerup">#</a>
+</h3>
+<p>One of the key things you need to take into account when working with mouse and keyboard events is that every time you click, every time you press a key, there&rsquo;s a pressing and a release action. These are usually named in events as &lsquo;down&rsquo; or &lsquo;up&rsquo;. For example, <code>mousedown</code> events happen when you start pressing the mouse button, <code>mouseup</code> events will happen at the release, and <code>click</code> events will happen when you both pressed and release the left mouse button. However, we&rsquo;ll try to use <code>PointerEvent</code>&rsquo;s&rsquo; instead of <code>MouseEvent</code>s since they are more general and work perfectly with any sort of pointer such as touch devices, drawing tablets, etc. They also allow for multi-touch input.</p>
+<h4 id="toggle-transforms-on-click">
+  Toggle transforms on click
+  <a class="anchor" href="#toggle-transforms-on-click">#</a>
+</h4>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "toggle = 0\nonclick = () =\u003e { toggle = toggle ? 0 : 1 }\nosc(30,.2,1.5)\n\t.rotate(()=\u003etoggle*Math.PI/2)\n\t.out()\n\nonpointerup = null // ignore this for now"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><p>Note that in JavaScript, you can pass any value as a boolean and JavaScript will try to interpret it in some way (search for truthy and falsy if you want to learn more). With numbers, <code>0</code> will act as <code>false</code> and any other number will act as <code>true</code>. We can make use of this to generate our toggling action.
+Fans of bitwise operators might implement the toggle as <code>toggle = toggle ^ 1</code>, where <code>^</code> means XOR.</p>
+<h5 id="pointer-version">
+  Pointer version
+  <a class="anchor" href="#pointer-version">#</a>
+</h5>
+<p>We can simplify a click to be simply when any pointer is released (or pressed, whichever you prefer):</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "onclick = null // getting rid of the conflicting click event\n//\ntoggle = 0\nonpointerup = () =\u003e { toggle = toggle ? 0 : 1 }\nosc(30,.2,1.5)\n\t.rotate(()=\u003etoggle*Math.PI/2)\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><p>Note that this example won&rsquo;t work if run after the previous one. Since both events will be triggered and the toggle will happen two times. Remember to &ldquo;clean-up&rdquo; any conflicting events either by reloading Hydra (remember to save doing <code>Ctrl+Shift+L</code>!) or simply setting the conflicting event to <code>null</code>. For example: <code>onclick = null</code>.</p>
+<h4 id="activate-transforms-while-clicking">
+  Activate transforms while clicking
+  <a class="anchor" href="#activate-transforms-while-clicking">#</a>
+</h4>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "press = 0\nonpointerdown = () =\u003e { press = 1 }\nonpointerup = () =\u003e { press = 0 }\nosc(30,.2,-1)\n\t.kaleid(()=\u003e press ? 6 : 2 )\n\t.modulate(o0,.085)\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><p>Note how we make use of the ternary operator again to get arbitrarily different values depending on if the user is pressing or not. You could also change these values into some other functions! or play with <code>time</code>.</p>
+<h4 id="count-the-amount-of-clicks">
+  Count the amount of clicks
+  <a class="anchor" href="#count-the-amount-of-clicks">#</a>
+</h4>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "clicks = 1\nonpointerup = () =\u003e { clicks++ }\nnoise(()=\u003eclicks)\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><p>The use of <code>++</code> at the end of <code>clicks</code> is a shorthand in many C-like languages for something like <code>clicks = clicks + 1</code>. Learn more about it <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">here</a></p>
+<h4 id="accumulate-during-clicks">
+  Accumulate during clicks
+  <a class="anchor" href="#accumulate-during-clicks">#</a>
+</h4>
+<p>In order to accumulate values while a pointer is being pressed we need to be constantly checking if it&rsquo;s pressed. We can do this using JavaScript&rsquo;s functionality for intervals. We could even do this with timeouts, actually. But there&rsquo;s a better way of doing this, which is checking if the pointer is being pressed every time Hydra renders a frame. But let&rsquo;s not get ahead of ourselves, and see the intervals version before:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">press</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">onpointerdown</span> <span style="color:#f92672">=</span> () =&gt; { <span style="color:#a6e22e">press</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span> }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">onpointerup</span> <span style="color:#f92672">=</span> () =&gt; { <span style="color:#a6e22e">press</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span> }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pressedTime</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">sensitivity</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.05</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// clearInterval(interval) // uncomment after first eval
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">interval</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(()=&gt;{ <span style="color:#a6e22e">pressedTime</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">press</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">sensitivity</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span> },<span style="color:#ae81ff">34</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">osc</span>(<span style="color:#ae81ff">15</span>,.<span style="color:#ae81ff">1</span>,()=&gt;<span style="color:#a6e22e">pressedTime</span>)
+</span></span><span style="display:flex;"><span>	.<span style="color:#a6e22e">out</span>()
+</span></span></code></pre></div><p>Ok, now that we see how tedious it can be to use intervals, let&rsquo;s see how we can do this in a more Hydrated way. As we just said, we could try checking if the pointer is being pressed each time Hydra renders a frame. Coincidentally, the arrows functions we love to use as arguments for our functions, are checked by Hydra every frame! We could try writing the action that updates our <code>pressedTime</code> inside one:</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "press = false\nonpointerdown = () =\u003e { press = true }\nonpointerup = () =\u003e { press = false }\npressedTime = 0; sensitivity = 0.05;\nosc(15,.1,()=\u003epressedTime += press ? sensitivity : 0)\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><p>This works! And there&rsquo;s no need to explicitly <code>return pressedTime</code> in our function since JavaScript can infer that&rsquo;s what we want to return since it&rsquo;s the last (and only) assignment we made.
+There&rsquo;s another way of making Hydra run some functionality each frame, which is using Hydra&rsquo;s <code>update</code> function which is discussed in the next part.</p>
+<h4 id="generating-new-patches-on-clicks">
+  Generating new patches on clicks
+  <a class="anchor" href="#generating-new-patches-on-clicks">#</a>
+</h4>
+<p>Since outputting is simply a function call as any other. We can also try to evaluate patches when an event is triggered:</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "textures = [noise(),osc(),osc(50).kaleid(),voronoi(),noise().thresh(0)]\nonpointerdown = () =\u003e {\n\tosc(40,.05,Math.random()*2)\n\t\t.rotate(Math.PI/2)\n\t\t.modulate(textures.at(Math.random()*textures.length),.25)\n  \t\t.out()\n}\nosc().out() // placeholder until click"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h4 id="other-mousepointer-events">
+  Other mouse/pointer events
+  <a class="anchor" href="#other-mousepointer-events">#</a>
+</h4>
+<p>There are many other pointer events you can try to experiment with! For example <code>pointermove</code> is triggered whenever the pointer moves. Read more about them <a href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events#event_types_and_global_event_handlers">here</a></p>
+<h3 id="keydown--keyup">
+  keydown &amp; keyup
+  <a class="anchor" href="#keydown--keyup">#</a>
+</h3>
+<p>To use keyboard input, we can use <code>KeyboardEvent</code>&rsquo;s such as <code>keydown</code>, <code>keyup</code>. These work exactly like <code>pointerdown</code> and <code>pointerup</code>, but here&rsquo;s where the listener parameter we called <code>event</code> earlier, the one we&rsquo;ve been quietly ignoring, comes into play. Since the event that we get will tell us which key was pressed! And if it was pressed while pressing Ctrl or Alt, etc. Now we can do everything we&rsquo;ve been doing with the mouse buttons using any key from the keyboard! If we want to use a specific we can just use a condition and ask if the event we received is correspondent with the key we want. You can test different keys and what their events return in very handy websites such as <a href="https://keyjs.dev/">key.js</a>.</p>
+<h4 id="moving-stuff-with-the-arrow-keys">
+  Moving stuff with the arrow keys
+  <a class="anchor" href="#moving-stuff-with-the-arrow-keys">#</a>
+</h4>
+<p>Here either add or subtract one from our x and y values depending on which arrow key the user presses. Each representing one of the 2 dimensional axis.</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "x = 0; y = 0;\nonkeyup = (event) =\u003e {\n\tswitch(event.key){\n      case \"ArrowUp\": y++; break;\n      case \"ArrowDown\": y--; break;\n      case \"ArrowLeft\": x++; break;\n      case \"ArrowRight\": x--; break;\n    }\n}\nnoise(6)\n\t.diff(o0)\n\t.scroll(()=\u003ex/10,()=\u003ey/10)\n\t.sub(shape(4,.02).scroll(()=\u003ex/10,()=\u003ey/10),2)\n\t.out()\n\nonpointerdown = null // getting rid of the previous listener"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h4 id="example-typing-shapes">
+  Example: Typing shapes
+  <a class="anchor" href="#example-typing-shapes">#</a>
+</h4>
+<p>Here we use the <code>keyCode</code> of the last pressed key to change the shape being shown. This is a modification of ax example from the page about iteration. There we used ASCII codes to automatically generate shapes. However, ASCII and keyCodes of given letters are different!</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "key = 25\nonkeydown = (e) =\u003e { key = e.keyCode }\nsrc(o0)\n\t.scale(1.007)\n\t.layer(\n\t\tshape(()=\u003e3+(key%4),.1,.4)\n\t\t\t.luma(.6,.01)\n\t\t\t.color(1,.5,0).hue(()=\u003ekey/100)\n\t\t\t.scrollX(()=\u003e.4+key/100)\n\t\t\t.rotate(()=\u003eMath.PI*key/100)\n\t)\n\t.out()\n\n// type anything here:\n//"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/97f4da0f92468b077f874d6f7ae1d91334ea734a" title='Last modified by Renzo Torr- | June 10, 2025' target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>June 10, 2025</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/edit/main/content/docs/learning/guides/event-listeners.md" target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#using-javascript-event-listeners">Using JavaScript event listeners</a>
+      <ul>
+        <li><a href="#click-pointerdown-and-pointerup">click, pointerdown and pointerup</a></li>
+        <li><a href="#keydown--keyup">keydown &amp; keyup</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

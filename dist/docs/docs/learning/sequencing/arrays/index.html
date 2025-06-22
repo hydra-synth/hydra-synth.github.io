@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/hydra-docs-v2/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hydra-docs-v2/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="arrays # When you send an Array as an input, Hydra will automatically switch and jump from each element from the Array to the next one. When there are no more elements, it wraps all the way back to the beginning. Let&rsquo;s see it in action:
+As you can see, the fact that both these Arrays have a different amount of values doesn&rsquo;t matter, Hydra will take values from each element of any Array for the same amount of time by default.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="arrays" />
+<meta property="og:description" content="arrays # When you send an Array as an input, Hydra will automatically switch and jump from each element from the Array to the next one. When there are no more elements, it wraps all the way back to the beginning. Let&rsquo;s see it in action:
+As you can see, the fact that both these Arrays have a different amount of values doesn&rsquo;t matter, Hydra will take values from each element of any Array for the same amount of time by default." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/arrays/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2025-06-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-10T12:59:02-03:00" />
+
+<title>arrays | hydra video synth</title>
+<link rel="manifest" href="/hydra-docs-v2/manifest.json">
+<link rel="icon" href="/hydra-docs-v2/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/hydra-docs-v2/book.min.9bac9dc478cf52ca962a4f35e004c2cdc70a5461e7451956af25f951f9749ded.css" integrity="sha256-m6ydxHjPUsqWKk814ATCzccKVGHnRRlWryX5Ufl0ne0=" crossorigin="anonymous">
+  <script defer src="/hydra-docs-v2/flexsearch.min.js"></script>
+  <script defer src="/hydra-docs-v2/en.search.min.3f0bed049a5592f5f43fd6d6e8cd9c2eceb3f7b6f07548b60a5c9d8d19caea1e.js" integrity="sha256-PwvtBJpVkvX0P9bW6M2cLs6z97bwdUi2ClydjRnK6h4=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.css"
+integrity="sha512-MWdvo/Qqcf4pY1ecQUB1uBn0qLp19U/qJ1Rpp2BDZeuBA7YsFEwkvqR/+aG4BroPiAYDunKJ6X8R/Pmdt3p7oA=="
+crossorigin="anonymous"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/show-hint.min.css"
+crossorigin="anonymous"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/paraiso-dark.min.css"
+crossorigin="anonymous"
+/>
+<script src="https://cdn.jsdelivr.net/npm/torus-dom/dist/index.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/javascript-hint.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/show-hint.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/selection/mark-selection.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/comment/comment.min.js"
+crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js"></script>
+<script src="http://localhost:1313/hydra-docs-v2//js/hydra-torus-editor.js"></script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/hydra-docs-v2/"><span>hydra video synth</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/hydra-docs-v2/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="http://localhost:1313/hydra-docs-v2/ja/">
+          日本語
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:1313/hydra-docs-v2/pt/">
+          Portuguese | Português
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/quick-start/" class="">quick start</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="toggle" checked />
+    <label for="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/" class="">learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/getting-started/" class="">getting started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/web-editor/" class="">web editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-abc558a55caa3a21197cd84f6409f58d" class="toggle"  />
+    <label for="section-abc558a55caa3a21197cd84f6409f58d" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/video-synth-basics/" class="">video synth basics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/src/" class="">sources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/outputs/" class="">outputs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/transforms/" class="">transforms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/blending/" class="">blending</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/modulate/" class="">modulation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/settings/" class="">settings &amp; state</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/external-sources/" class="">external sources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eca88cb65a773793437f0e9114baf99c" class="toggle" checked />
+    <label for="section-eca88cb65a773793437f0e9114baf99c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/sequencing/" class="">sequencing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrays/" class="active">arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrow-functions/" class="">arrow functions</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e9c592a536d885dc59f7d3443e5419c" class="toggle"  />
+    <label for="section-9e9c592a536d885dc59f7d3443e5419c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/interactivity/" class="">interactivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/mouse/" class="">mouse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/audio/" class="">audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/midi/" class="">midi</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="toggle"  />
+    <label for="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="flex justify-between">
+      <a role="button" class="">extending</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extensions/" class="">extensions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extending-hydra/" class="">other libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/glsl/" class="">custom glsl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8afa17f34011c70734ab422498c11155" class="toggle"  />
+    <label for="section-8afa17f34011c70734ab422498c11155" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/" class="">developing &amp; contributing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/editor/" class="">editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/synth/" class="">developing hydra-synth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/server/" class="">backend server</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a7f0265de67bb55990b78cc970db95f" class="toggle"  />
+    <label for="section-5a7f0265de67bb55990b78cc970db95f" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/guides/" class="">guides</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/javascript/" class="">JavaScript for Hydra users</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/automatic-patches/" class="">Iteration &amp; generative patches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/frames-and-timing/" class="">Updating frames &amp; precise timing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/textures/" class="">Textures [Hydra Book]</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/audio/" class="">Audio-reactivity explained</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/event-listeners/" class="">Clicks &amp; keys</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0eb140a6ac0de442b2f42574663cfb56" class="toggle"  />
+    <label for="section-0eb140a6ac0de442b2f42574663cfb56" class="flex justify-between">
+      <a role="button" class="">How to...</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/hydra-in-a-webpage/" class="">Embed Hydra on your webpage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/record-hydra-output/" class="">Record Hydra&#39;s output</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/use-hydra-without-showing-code/" class="">Use Hydra without showing the code</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/reference/" class="">reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/community/" class="">community</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/hydra-docs-v2/posts/"  >
+        blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://opencollective.com/hydra-synth"  target="_blank" rel="noopener">
+        contribute
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://hydra.ojack.xyz/grants"  target="_blank" rel="noopener">
+        grants
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/hydra-docs-v2/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>arrays</strong>
+
+  <label for="toc-control">
+    
+    <img src="/hydra-docs-v2/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#bpm"><strong>bpm</strong></a></li>
+    <li><a href="#fast"><strong>fast</strong></a></li>
+    <li><a href="#offset"><strong>offset</strong></a></li>
+    <li><a href="#fit"><strong>fit</strong></a></li>
+    <li><a href="#smooth"><strong>smooth</strong></a></li>
+    <li><a href="#ease"><strong>ease</strong></a>
+      <ul>
+        <li><a href="#easing-functions">Easing functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#notes">Notes</a>
+      <ul>
+        <li><a href="#arrays-as-variables-or-functions">Arrays as variables or functions</a></li>
+        <li><a href="#arrays-and-textures">Arrays and textures</a></li>
+        <li><a href="#a-small-bug">A small bug</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="arrays">
+  arrays
+  <a class="anchor" href="#arrays">#</a>
+</h1>
+<p>When you send an Array as an input, Hydra will automatically switch and jump from each element from the Array to the next one. When there are no more elements, it wraps all the way back to the beginning. Let&rsquo;s see it in action:</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "osc([20,30,50,60],.1,[0,1.5])\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><p>As you can see, the fact that both these Arrays have a different amount of values doesn&rsquo;t matter, Hydra will take values from each element of any Array for the same amount of time by default.</p>
+<p>The Arrays can be passed in any way, you may have a variable that stores an Array and use its name within your sketches (not recommended in some scenarios, more info below), you may create a function that returns Arrays and use that to automatically generate discrete sequences of values:</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "randomArray = (l=12)=\u003e Array.from({length: l}, Math.random);\ngradient()\n\t.hue(randomArray())\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h2 id="bpm">
+  <strong>bpm</strong>
+  <a class="anchor" href="#bpm">#</a>
+</h2>
+<p>To change how rapidly Hydra switches from element to element of all Arrays, you can change the <code>bpm</code> variable (meaning beats per minute) to any value you desire:</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "bpm = 138 // change me !\nrandomArray = (l=12)=\u003e Array.from({length: l}, Math.random);\ngradient()\n\t.hue(randomArray())\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><p>The default value for <code>bpm</code> is 30.</p>
+<p>When livecoding visuals at the same time that music is playing, it can be useful to have a tapping metronome opened to keep track of the BPM being played and set this variable as such.</p>
+<h2 id="fast">
+  <strong>fast</strong>
+  <a class="anchor" href="#fast">#</a>
+</h2>
+<p>Hydra adds a couple of methods to all Arrays to be used inside Hydra. <code>.fast</code> will control the speed at which Hydra takes elements from the Array. It receives a Number as argument, by which the global speed will be multiplied. So calling <code>.fast(1)</code> on an Array is the same as nothing. Higher values will generate faster switching, while lower than 1 values will be slower.</p>
+<p class="center"><code>[].fast( speed = 1 )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "bpm = 45\nosc([20,30,50,60],.1,[0,1.5].fast(1.5)) // 50% faster\n    //.rotate([-.2,0,.2].fast(1)) // try different speeds for each array\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h2 id="offset">
+  <strong>offset</strong>
+  <a class="anchor" href="#offset">#</a>
+</h2>
+<p>Another one of the methods Hydra adds to Arrays, allows you to offset the timing at which Hydra will switch from one element of the Array to the next one. The method <code>.offset</code> takes a Number from 0 to 1.</p>
+<p class="center"><code>[].offset( offset = 0 )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "bpm = 45\nosc([20,30,50,60],.1,[0,1.5].offset(.5)) // try changing the offset\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h2 id="fit">
+  <strong>fit</strong>
+  <a class="anchor" href="#fit">#</a>
+</h2>
+<p>Sometimes you have an Array whose values aren&rsquo;t very useful when used as input for a some Hydra function.
+Hydra adds a <code>.fit</code> method to Arrays which takes a minimum and a maximum to which fit the values into:</p>
+<p class="center"><code>[].fit( min, max )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "bpm = 120\narr = ()=\u003e [1,2,4,8,16,32,64,128,256,512]\nosc(50,.1,arr().fit(0,Math.PI))\n\t.scale(arr().fit(1,2))\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h2 id="smooth">
+  <strong>smooth</strong>
+  <a class="anchor" href="#smooth">#</a>
+</h2>
+<p>You can also interpolate between values instead of jumping from one to the other. That is, smoothly transition between values. For this you can use the <code>.smooth</code> method. It may take a Number argument (defaulted to 1) which controls the smoothness.</p>
+<p class="center"><code>[].smooth()</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "bpm = 50\narr = [0,0.8,2]\nosc(50,.1,arr.smooth())\n\t.rotate(arr.fit(-Math.PI/4,Math.PI/4).smooth())\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><p>Try smoothing some of the above examples and see what happens!</p>
+<h2 id="ease">
+  <strong>ease</strong>
+  <a class="anchor" href="#ease">#</a>
+</h2>
+<p>The default interpolation used by Hydra on an Array that called <code>.smooth</code> is linear interpolation. You can select a different easing function as follows:</p>
+<p class="center"><code>[].ease( easingFunc = &quot;linear&quot; )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "bpm = 50\narr = [0,0.8,2]\nosc(50,.1,arr.ease('easeInQuad'))\n\t.rotate(arr.fit(-Math.PI/4,Math.PI/4).ease('easeOutQuad'))\n\t.out() // try other easing functions !"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="easing-functions">
+  Easing functions
+  <a class="anchor" href="#easing-functions">#</a>
+</h3>
+<p>The following are the available easing functions:</p>
+<ul>
+<li>linear: no easing, no acceleration</li>
+<li>easeInQuad: accelerating from zero velocity</li>
+<li>easeOutQuad: decelerating to zero velocity</li>
+<li>easeInOutQuad: acceleration until halfway, then deceleration</li>
+<li>easeInCubic</li>
+<li>easeOutCubic</li>
+<li>easeInOutCubic</li>
+<li>easeInQuart</li>
+<li>easeOutQuart</li>
+<li>easeInOutQuart</li>
+<li>easeInQuint</li>
+<li>easeOutQuint</li>
+<li>easeInOutQuint</li>
+<li>sin: sinusoidal shape</li>
+</ul>
+<h2 id="notes">
+  Notes
+  <a class="anchor" href="#notes">#</a>
+</h2>
+<h3 id="arrays-as-variables-or-functions">
+  Arrays as variables or functions
+  <a class="anchor" href="#arrays-as-variables-or-functions">#</a>
+</h3>
+<p>Storing an Array in a variable can lead to some trouble as soon as you apply some of the just-mentioned functions to it. Since Arrays are Objects, each time you call your variable, you&rsquo;ll be calling the same Object. If you apply some speed via <code>.fast</code> or smoothness via <code>.smooth</code> somewhere in your patch, and then use the same variable, all the following uses of the Array will also have these effects applied to them. For example</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "arr = [1,2,3]\nosc(30,.1,arr.smooth())\n\t.rotate(arr)\n\t.out()\n\narr2 = () =\u003e [1,2,3]\nosc(30,.1,arr2().smooth())\n\t.rotate(arr2())\n\t.out(o1)\n\nrender()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="arrays-and-textures">
+  Arrays and textures
+  <a class="anchor" href="#arrays-and-textures">#</a>
+</h3>
+<p>Note that the following will not work:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">solid</span>(<span style="color:#ae81ff">1</span>,.<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>	.<span style="color:#a6e22e">diff</span>([<span style="color:#a6e22e">osc</span>(),<span style="color:#a6e22e">noise</span>()])
+</span></span><span style="display:flex;"><span>	.<span style="color:#a6e22e">out</span>()
+</span></span></code></pre></div><p>Hydra can&rsquo;t handle Arrays of textures. You can work around it in some ways:</p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "solid(1,.5,0)\n\t.diff(osc().blend(noise(),[0,1].smooth()))\n\t.out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><p>Unfortunately, if you want to use many textures this solution doesn&rsquo;t really apply.</p>
+<p>Users of Hydra have come up with some experimental solutions which might come in handy in some scenarios, but they come with some drawbacks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// blending method, heavy GPU load.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// every element from the array will be rendered even if not shown.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// allows for blending between elements.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">select</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">arr</span>,<span style="color:#a6e22e">l</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">clamp</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">num</span>, <span style="color:#a6e22e">min</span>, <span style="color:#a6e22e">max</span>) =&gt; Math.<span style="color:#a6e22e">min</span>(Math.<span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">num</span>, <span style="color:#a6e22e">min</span>), <span style="color:#a6e22e">max</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">blending</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">l</span>,<span style="color:#a6e22e">i</span>)=&gt; (<span style="color:#a6e22e">clamp</span>(<span style="color:#a6e22e">l</span><span style="color:#f92672">-</span>(<span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>),<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isFunction</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;function&#39;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">prev</span>,<span style="color:#a6e22e">curr</span>,<span style="color:#a6e22e">i</span>)=&gt;
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">prev</span>.<span style="color:#a6e22e">blend</span>(<span style="color:#a6e22e">curr</span>, <span style="color:#a6e22e">isFunction</span> <span style="color:#f92672">?</span> ()=&gt;<span style="color:#a6e22e">blending</span>(<span style="color:#a6e22e">l</span>(),<span style="color:#a6e22e">i</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">blending</span>(<span style="color:#a6e22e">l</span>,<span style="color:#a6e22e">i</span>))
+</span></span><span style="display:flex;"><span>	)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">textures</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">noise</span>(), <span style="color:#a6e22e">osc</span>(), <span style="color:#a6e22e">voronoi</span>(), <span style="color:#a6e22e">gradient</span>()]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">select</span>(<span style="color:#a6e22e">textures</span>,()=&gt;Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">mouse</span>.<span style="color:#a6e22e">x</span><span style="color:#f92672">/</span><span style="color:#a6e22e">innerWidth</span><span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">out</span>()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// re-compiling method, heavy CPU load.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// it reserves an output for the switching.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// can&#39;t blend between elements.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// each time an element switches the shader must be recompiled
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">osc</span>(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>  	.<span style="color:#a6e22e">rotate</span>()
+</span></span><span style="display:flex;"><span>  	.<span style="color:#a6e22e">modulate</span>(<span style="color:#a6e22e">o3</span>,.<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>	.<span style="color:#a6e22e">out</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">textures</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">noise</span>(), <span style="color:#a6e22e">osc</span>(), <span style="color:#a6e22e">voronoi</span>(), <span style="color:#a6e22e">shape</span>()]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">tex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">textures</span>[<span style="color:#a6e22e">index</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">update</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">dt</span>)=&gt; {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">time</span> <span style="color:#f92672">%</span> (<span style="color:#ae81ff">60</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">bpm</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">dt</span>){
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">index</span><span style="color:#f92672">++</span>; <span style="color:#a6e22e">index</span> <span style="color:#f92672">%=</span> <span style="color:#a6e22e">textures</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">tex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">textures</span>[<span style="color:#a6e22e">index</span>]
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">tex</span>.<span style="color:#a6e22e">out</span>(<span style="color:#a6e22e">o3</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="a-small-bug">
+  A small bug
+  <a class="anchor" href="#a-small-bug">#</a>
+</h3>
+<blockquote class="book-hint danger">
+  Currently, sketches using arrays with <code>smooth</code> have a small bug for the first few seconds (or more, depending on your <code>bpm</code>). Hydra tries to interpolate between the first element of the array with the one before, the problem being that there&rsquo;s no element before the first one, so it returns a <code>NaN</code>. This shouldn&rsquo;t be much of a problem, but you can try to circumvent this setting the time yourself: <code>hydraSynth.synth.time = 60/bpm*128</code>
+</blockquote>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/984da99a24826244862b44dc2e0de9f06b0883c2" title='Last modified by Renzo Torr- | June 10, 2025' target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>June 10, 2025</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/edit/main/content/docs/learning/sequencing/arrays.md" target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#bpm"><strong>bpm</strong></a></li>
+    <li><a href="#fast"><strong>fast</strong></a></li>
+    <li><a href="#offset"><strong>offset</strong></a></li>
+    <li><a href="#fit"><strong>fit</strong></a></li>
+    <li><a href="#smooth"><strong>smooth</strong></a></li>
+    <li><a href="#ease"><strong>ease</strong></a>
+      <ul>
+        <li><a href="#easing-functions">Easing functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#notes">Notes</a>
+      <ul>
+        <li><a href="#arrays-as-variables-or-functions">Arrays as variables or functions</a></li>
+        <li><a href="#arrays-and-textures">Arrays and textures</a></li>
+        <li><a href="#a-small-bug">A small bug</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

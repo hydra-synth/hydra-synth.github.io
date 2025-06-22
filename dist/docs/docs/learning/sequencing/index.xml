@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sequencing on hydra video synth</title>
+    <link>http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/</link>
+    <description>Recent content in sequencing on hydra video synth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>arrays</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/arrays/</link>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/arrays/</guid>
+      <description>arrays # When you send an Array as an input, Hydra will automatically switch and jump from each element from the Array to the next one. When there are no more elements, it wraps all the way back to the beginning. Let&amp;rsquo;s see it in action:&#xA;As you can see, the fact that both these Arrays have a different amount of values doesn&amp;rsquo;t matter, Hydra will take values from each element of any Array for the same amount of time by default.</description>
+    </item>
+    <item>
+      <title>arrow functions</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/arrow-functions/</link>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/sequencing/arrow-functions/</guid>
+      <description>arrow functions # ()=&amp;gt; time # You can use dynamic inputs in your sketches by passing functions as arguments. When Hydra takes a function as an argument, what it will do is evaluate it every time it renders a frame. The return of the function will be used as the value for that parameter during that frame render. So you can use a function to simply keep track of a value that you know will change over time, for example, mouse position (which we&amp;rsquo;ll see later).</description>
+    </item>
+  </channel>
+</rss>

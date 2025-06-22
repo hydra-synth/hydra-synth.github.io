@@ -1,79 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Guides on hydra video synth</title>
-    <link>https://hydra.ojack.xyz/docs/docs/learning/guides/</link>
-    <description>Recent content in Guides on hydra video synth</description>
+    <title>guides on hydra video synth</title>
+    <link>http://localhost:1313/hydra-docs-v2/docs/learning/guides/</link>
+    <description>Recent content in guides on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://hydra.ojack.xyz/docs/docs/learning/guides/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning/guides/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hydra Book: Textures</title>
-      <link>https://hydra.ojack.xyz/docs/docs/learning/guides/textures/</link>
+      <title>JavaScript for Hydra users</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/guides/javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hydra.ojack.xyz/docs/docs/learning/guides/textures/</guid>
-      <description>Textures # by Naoto Hieda
-In this chapter, we discuss textures or patterns, separately from colors or movements. Most of the snippets have low saturation in order to separate textures from other effects.
-Oscillator # osc(freq,sync,offset) is one of the basic sources to create a texture. The first argument determines the frequency (i.e., how packed the stripes are), the second for the sync (i.e., the scroll speed), and the third for the offset, which adds color to the pattern.</description>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/guides/javascript/</guid>
+      <description>JavaScript for Hydra users # by Geikha&#xA;This guide is made for users who are new to JavaScript or coding in general and would like to dive into these topics. You don&amp;rsquo;t need to fully understand what&amp;rsquo;s here to use Hydra. If you&amp;rsquo;re just starting with Hydra and you have no coding experience, we recommend you experiment with Hydra a bit before reading this.&#xA;Comments # // This is a one line comment Most programming languages have implemented in them a feature commonly referred as comments.</description>
     </item>
-    
     <item>
-      <title></title>
-      <link>https://hydra.ojack.xyz/docs/docs/learning/guides/color/</link>
+      <title>Iteration &amp; generative patches</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/guides/automatic-patches/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hydra.ojack.xyz/docs/docs/learning/guides/color/</guid>
-      <description></description>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/guides/automatic-patches/</guid>
+      <description>Iteration &amp;amp; generative patches # by Geikha&#xA;For this tutorial we&amp;rsquo;ll be assuming you&amp;rsquo;ve already learned by your own means what iteration and conditionals are in a programming context. Iteration : automatically generate patches # As you may know from regular programming, or other creative coding environments such as p5, iteration helps us repeat some operation(s) many times to achieve a specific goal. Maybe you would like to layer many similar objects but with slightly different values, and you want so many of them that writing each one manually isn&amp;rsquo;t desirable.</description>
     </item>
-    
     <item>
-      <title></title>
-      <link>https://hydra.ojack.xyz/docs/docs/learning/guides/feedback/</link>
+      <title>Updating frames &amp; precise timing</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/guides/frames-and-timing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hydra.ojack.xyz/docs/docs/learning/guides/feedback/</guid>
-      <description></description>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/guides/frames-and-timing/</guid>
+      <description>Updating frames &amp;amp; precise timing # by Geikha&#xA;Using the update function # There&amp;rsquo;s a function in the Hydra API called update. This function runs at the beginning of every frame render right before the values for time and a.fft are calculated. If you are familiar with Processing or p5, you can think of update as Hydra&amp;rsquo;s equivalent to the draw function. Using update can be very useful for creating generative visuals (generative in the sense of controlling visual elements with values that evolve through time either randomly or following certain rules).</description>
     </item>
-    
     <item>
-      <title></title>
-      <link>https://hydra.ojack.xyz/docs/docs/learning/guides/frames-and-timing/</link>
+      <title>Textures [Hydra Book]</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/guides/textures/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hydra.ojack.xyz/docs/docs/learning/guides/frames-and-timing/</guid>
-      <description>frames and timing # by geikha
-Using the update function # There&amp;rsquo;s a function in the Hydra API called update. This function runs at the beginning of every frame render right before the values for time and a.fft are calculated. If you are familiar with Processing or p5, you can think of update as Hydra&amp;rsquo;s equivalent to the draw function. Using update can be very useful for creating generative visuals (generative in the sense of controlling visual elements with values that evolve through time either randomly or following certain rules).</description>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/guides/textures/</guid>
+      <description>Textures # by Naoto Hieda&#xA;In this chapter of the Hydra Book, we discuss textures or patterns, separately from colors or movements. Most of the snippets have low saturation in order to separate textures from other effects.&#xA;Oscillator # osc(freq,sync,offset) is one of the basic sources to create a texture. The first argument determines the frequency (i.e., how packed the stripes are), the second for the sync (i.e., the scroll speed), and the third for the offset, which adds color to the pattern.</description>
     </item>
-    
     <item>
-      <title></title>
-      <link>https://hydra.ojack.xyz/docs/docs/learning/guides/hydra-garden/</link>
+      <title>Audio-reactivity explained</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/guides/audio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hydra.ojack.xyz/docs/docs/learning/guides/hydra-garden/</guid>
-      <description></description>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/guides/audio/</guid>
+      <description>Audio-reactivity explained # by Geikha&#xA;Reacting to audio # In order to achieve audio reactivity, Hydra makes use of a JavaScript library called Meyda and has a pre-defined object called a to access many of its features. Audio reactivity in Hydra is mainly achieved using an algorithm called Fast Fourier transform. You definitely don&amp;rsquo;t need to know what it is or how it achieves what it does to use it, but you need to understand the following:</description>
     </item>
-    
     <item>
-      <title>Iteration: automatically generate patches</title>
-      <link>https://hydra.ojack.xyz/docs/docs/learning/guides/automatic-patches/</link>
+      <title>Clicks &amp; keys</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/guides/event-listeners/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hydra.ojack.xyz/docs/docs/learning/guides/automatic-patches/</guid>
-      <description>Using iteration and conditionals to create patches # by geikha
-Note # For this tutorial we&amp;rsquo;ll be assuming you&amp;rsquo;ve already learned by your own means what iteration and conditionals are in a programming context.
-Iteration : automatically generate patches # As you may know from regular programming, or other creative coding environments such as p5, iteration helps us repeat some operation(s) many times to achieve a specific goal. Maybe you would like to layer many similar objects but with slightly different values, and you want so many of them that writing each one manually isn&amp;rsquo;t desirable.</description>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/guides/event-listeners/</guid>
+      <description>Using clicks &amp;amp; keyboard presses in Hydra # by Geikha&#xA;Using JavaScript event listeners # Browsers have implemented in them a system of events which allows them to do X when Y happens. More concretely, this means we can define functions that will be run whenever a given event happens. Some examples of events are click (when a mouse click happens), resize (when the browser&amp;rsquo;s window is resized), keydown (when a keyboard key is pressed down), load (when the webpage and its resources have been loaded), etc.</description>
     </item>
-    
-    <item>
-      <title>javascript for hydra users</title>
-      <link>https://hydra.ojack.xyz/docs/docs/learning/guides/javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hydra.ojack.xyz/docs/docs/learning/guides/javascript/</guid>
-      <description>JavaScript Guide # This guide is made for users who are new to JavaScript or coding in general and would like to dive into these topics. You don&amp;rsquo;t need to fully understand what&amp;rsquo;s here to use Hydra. If you&amp;rsquo;re just starting with Hydra and you have no coding experience, we recommend you experiment with Hydra a bit before reading this.
-Comments # // This is a one line comment Most programming languages have implemented in them a feature commonly referred as comments.</description>
-    </item>
-    
   </channel>
 </rss>

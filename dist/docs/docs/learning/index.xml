@@ -2,30 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>learning on hydra video synth</title>
-    <link>https://hydra.ojack.xyz/docs/docs/learning/</link>
+    <link>http://localhost:1313/hydra-docs-v2/docs/learning/</link>
     <description>Recent content in learning on hydra video synth</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://hydra.ojack.xyz/docs/docs/learning/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="http://localhost:1313/hydra-docs-v2/docs/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Getting started</title>
-      <link>https://hydra.ojack.xyz/docs/docs/learning/getting-started/</link>
+      <title>getting started</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/getting-started/</link>
       <pubDate>Tue, 04 Apr 2023 15:10:36 +0200</pubDate>
-      
-      <guid>https://hydra.ojack.xyz/docs/docs/learning/getting-started/</guid>
-      <description>Getting started with hydra # This document is an introduction to making live visuals using Hydra. It covers the basics of writing code in the browser to generate and mix live video sources. No coding or video experience is necessary!
-If you just want to start in 60 seconds you can also check:
-Getting started short version This tutorial is meant to be used from within the hydra web editor.</description>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/getting-started/</guid>
+      <description>Getting started with hydra # This document is an introduction to making live visuals using Hydra. It covers the basics of writing code in the browser to generate and mix live video sources. No coding or video experience is necessary!&#xA;This tutorial is meant to be used alongside the hydra web editor. It is also interactive &amp;ndash; you can directly modify the code in each code block to see how it affects the visuals.</description>
     </item>
-    
     <item>
-      <title>Using the web editor</title>
-      <link>https://hydra.ojack.xyz/docs/docs/learning/web-editor/</link>
+      <title>web editor</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/web-editor/</link>
       <pubDate>Tue, 04 Apr 2023 15:10:36 +0200</pubDate>
-      
-      <guid>https://hydra.ojack.xyz/docs/docs/learning/web-editor/</guid>
-      <description>Web editor # basics of the browser editor at https://hydra.ojack.xyz
-key commands # CTRL-Enter: run a line of code CTRL-Shift-Enter: run all code on screen ALT-Enter: run a block CTRL-Shift-H: hide or show code CTRL-Shift-F: format code using Prettier CTRL-Shift-S: Save screenshot and download as local file. The CTRL-Shift-G: Share to twitter (if available). Shares to @hydra_patterns toolbar # At the right up corner you will find a toolbar with these buttons: run all code Runs all code on the page (same as typing *ctrl+shift+enter) upload to gallery upload a sketch to Hydra&amp;rsquo;s gallery and create a shorter URL clear all resets the environment and clears text from the editor show random sketch.</description>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/web-editor/</guid>
+      <description>web editor # Basic usage of the browser editor at hydra.ojack.xyz&#xA;Keyboard shortcuts # CTRL-Enter: run a line of code CTRL-Shift-Enter: run all code on screen ALT-Enter: run a block CTRL-Shift-H: hide or show code CTRL-Shift-F: format code using Prettier CTRL-Shift-S: Save screenshot and download as local file. CTRL-Shift-G: Shares to Mastodon (not available right now, but you can still store sketches). Toolbar # At the right up corner you will find a toolbar with these buttons: run all code Runs all code on the page (same as typing *ctrl+shift+enter) upload to gallery upload a sketch to Hydra&amp;rsquo;s gallery and create a shorter URL clear all resets the environment and clears text from the editor show random sketch.</description>
     </item>
-    
+    <item>
+      <title>external sources</title>
+      <link>http://localhost:1313/hydra-docs-v2/docs/learning/external-sources/</link>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hydra-docs-v2/docs/learning/external-sources/</guid>
+      <description>external sources # Hydra allows you to load external image sources easily using different browser functionalities. Some of the possible internal sources are: static images, videos, webcam, screen-sharing, and other possibilities. You load each of these to the different source variables (s0, s1, s2 and s3), which can be used in the same way outputs can via the usage of the src function. Sources need to be initialized with some key info in order to work.</description>
+    </item>
   </channel>
 </rss>
