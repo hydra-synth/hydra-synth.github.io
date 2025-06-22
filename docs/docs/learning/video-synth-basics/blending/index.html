@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/hydra-docs-v2/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hydra-docs-v2/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="blending # Blend transforms allow you to combine the colors of two visual sources. There are many ways of operating with them. There are multiple blend modes in Hydra, similar to the blend modes you might find in raster graphics programs such as Photoshop or GNU-IMP. All blend functions take in a texture which can be a source, a patch or a framebuffer (such as o0, o1, s0, etc).">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="blending" />
+<meta property="og:description" content="blending # Blend transforms allow you to combine the colors of two visual sources. There are many ways of operating with them. There are multiple blend modes in Hydra, similar to the blend modes you might find in raster graphics programs such as Photoshop or GNU-IMP. All blend functions take in a texture which can be a source, a patch or a framebuffer (such as o0, o1, s0, etc)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/blending/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2025-06-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-10T12:59:21-03:00" />
+
+<title>blending | hydra video synth</title>
+<link rel="manifest" href="/hydra-docs-v2/manifest.json">
+<link rel="icon" href="/hydra-docs-v2/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/hydra-docs-v2/book.min.9bac9dc478cf52ca962a4f35e004c2cdc70a5461e7451956af25f951f9749ded.css" integrity="sha256-m6ydxHjPUsqWKk814ATCzccKVGHnRRlWryX5Ufl0ne0=" crossorigin="anonymous">
+  <script defer src="/hydra-docs-v2/flexsearch.min.js"></script>
+  <script defer src="/hydra-docs-v2/en.search.min.3f0bed049a5592f5f43fd6d6e8cd9c2eceb3f7b6f07548b60a5c9d8d19caea1e.js" integrity="sha256-PwvtBJpVkvX0P9bW6M2cLs6z97bwdUi2ClydjRnK6h4=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.css"
+integrity="sha512-MWdvo/Qqcf4pY1ecQUB1uBn0qLp19U/qJ1Rpp2BDZeuBA7YsFEwkvqR/+aG4BroPiAYDunKJ6X8R/Pmdt3p7oA=="
+crossorigin="anonymous"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/show-hint.min.css"
+crossorigin="anonymous"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/theme/paraiso-dark.min.css"
+crossorigin="anonymous"
+/>
+<script src="https://cdn.jsdelivr.net/npm/torus-dom/dist/index.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/javascript-hint.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/hint/show-hint.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/selection/mark-selection.min.js"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/comment/comment.min.js"
+crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js"></script>
+<script src="http://localhost:1313/hydra-docs-v2//js/hydra-torus-editor.js"></script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/hydra-docs-v2/"><span>hydra video synth</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/hydra-docs-v2/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="http://localhost:1313/hydra-docs-v2/ja/">
+          日本語
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:1313/hydra-docs-v2/pt/">
+          Portuguese | Português
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/quick-start/" class="">quick start</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="toggle" checked />
+    <label for="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/" class="">learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/getting-started/" class="">getting started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/web-editor/" class="">web editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-abc558a55caa3a21197cd84f6409f58d" class="toggle" checked />
+    <label for="section-abc558a55caa3a21197cd84f6409f58d" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/video-synth-basics/" class="">video synth basics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/src/" class="">sources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/outputs/" class="">outputs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/transforms/" class="">transforms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/blending/" class="active">blending</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/modulate/" class="">modulation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/settings/" class="">settings &amp; state</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/external-sources/" class="">external sources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eca88cb65a773793437f0e9114baf99c" class="toggle"  />
+    <label for="section-eca88cb65a773793437f0e9114baf99c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/sequencing/" class="">sequencing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrays/" class="">arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrow-functions/" class="">arrow functions</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e9c592a536d885dc59f7d3443e5419c" class="toggle"  />
+    <label for="section-9e9c592a536d885dc59f7d3443e5419c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/interactivity/" class="">interactivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/mouse/" class="">mouse</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/audio/" class="">audio</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/interactivity/midi/" class="">midi</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="toggle"  />
+    <label for="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="flex justify-between">
+      <a role="button" class="">extending</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extensions/" class="">extensions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extending-hydra/" class="">other libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/glsl/" class="">custom glsl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8afa17f34011c70734ab422498c11155" class="toggle"  />
+    <label for="section-8afa17f34011c70734ab422498c11155" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/" class="">developing &amp; contributing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/editor/" class="">editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/synth/" class="">developing hydra-synth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/server/" class="">backend server</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a7f0265de67bb55990b78cc970db95f" class="toggle"  />
+    <label for="section-5a7f0265de67bb55990b78cc970db95f" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/guides/" class="">guides</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/javascript/" class="">JavaScript for Hydra users</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/automatic-patches/" class="">Iteration &amp; generative patches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/frames-and-timing/" class="">Updating frames &amp; precise timing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/textures/" class="">Textures [Hydra Book]</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/audio/" class="">Audio-reactivity explained</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/event-listeners/" class="">Clicks &amp; keys</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0eb140a6ac0de442b2f42574663cfb56" class="toggle"  />
+    <label for="section-0eb140a6ac0de442b2f42574663cfb56" class="flex justify-between">
+      <a role="button" class="">How to...</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/hydra-in-a-webpage/" class="">Embed Hydra on your webpage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/record-hydra-output/" class="">Record Hydra&#39;s output</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/use-hydra-without-showing-code/" class="">Use Hydra without showing the code</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/reference/" class="">reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/community/" class="">community</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/hydra-docs-v2/posts/"  >
+        blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://opencollective.com/hydra-synth"  target="_blank" rel="noopener">
+        contribute
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://hydra.ojack.xyz/grants"  target="_blank" rel="noopener">
+        grants
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/hydra-docs-v2/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>blending</strong>
+
+  <label for="toc-control">
+    
+    <img src="/hydra-docs-v2/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#some-blend-transforms">Some blend transforms</a>
+      <ul>
+        <li><a href="#blend"><strong>blend</strong></a></li>
+        <li><a href="#add"><strong>add</strong></a></li>
+        <li><a href="#sub"><strong>sub</strong></a></li>
+        <li><a href="#mult"><strong>mult</strong></a></li>
+        <li><a href="#diff"><strong>diff</strong></a></li>
+        <li><a href="#layer"><strong>layer</strong></a></li>
+        <li><a href="#mask"><strong>mask</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="blending">
+  blending
+  <a class="anchor" href="#blending">#</a>
+</h1>
+<p>Blend transforms allow you to combine the colors of two visual sources. There are many ways of operating with them. There are multiple <a href="https://en.wikipedia.org/wiki/Blend_modes">blend modes</a> in Hydra, similar to the blend modes you might find in raster graphics programs such as Photoshop or GNU-IMP. All blend functions take in a texture which can be a source, a patch or a framebuffer (such as o0, o1, s0, etc).</p>
+<hr>
+<h2 id="some-blend-transforms">
+  Some blend transforms
+  <a class="anchor" href="#some-blend-transforms">#</a>
+</h2>
+<h3 id="blend">
+  <strong>blend</strong>
+  <a class="anchor" href="#blend">#</a>
+</h3>
+<p>The simple <code>blend</code> functions mixes the colors from two sources to create a third source. You can also specify how much of the second texture you mix in. Inputting <code>0</code> will output the original texture unaffected, <code>0.5</code> (the default) mixes them 50%/50%, and <code>1</code> will only show the secondary texture. Going outside this range will create broken mixes, which can be interesting too.</p>
+<p class="center"><code>blend( texture, amount = 0.5 )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "s0.initCam()\n\nsrc(s0).out(o0) // render the webcam to output o0\n\nosc(10).out(o1) // render an oscillator to output o1\n\nsrc(o0).blend(o1).out(o2) // start with o0, mix it with o1, and send it out to o2\n\nrender() // render all four outputs at once"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="add">
+  <strong>add</strong>
+  <a class="anchor" href="#add">#</a>
+</h3>
+<p>Adds the color channels of two images. You can multiply the second image with the <code>amount</code> argument, so you can add more or less from it. Using negative amounts will effectively subtract values instead of adding.</p>
+<p class="center"><code>add( texture, amount = 1 )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "shape().scale(0.5).add(shape(4),[0,0.25,0.5,0.75,1]).out(o0)"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="sub">
+  <strong>sub</strong>
+  <a class="anchor" href="#sub">#</a>
+</h3>
+<p>Subtracts the color channels of one image to another.</p>
+<p class="center"><code>sub( texture, amount = 1 )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "osc().sub(osc(6)).out(o0)"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="mult">
+  <strong>mult</strong>
+  <a class="anchor" href="#mult">#</a>
+</h3>
+<p>Multiplies the original image by the incoming one.</p>
+<p class="center"><code>mult( texture, amount = 1 )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "osc(9,0.1,2).mult(osc(13,0.5,5)).out()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="diff">
+  <strong>diff</strong>
+  <a class="anchor" href="#diff">#</a>
+</h3>
+<p>Shows the difference between two textures. In other words: <code>abs(img1 - img2)</code>.</p>
+<p class="center"><code>diff( texture )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "osc(9,0.1,1).diff(osc(13,0.5,5)).out(o0)"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="layer">
+  <strong>layer</strong>
+  <a class="anchor" href="#layer">#</a>
+</h3>
+<p>Places a texture over another one using its transparency values.</p>
+<p class="center"><code>layer( texture )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "solid(1,0,0,1).layer(shape(4).color(0,1,0,()=\u003eMath.sin(time*2))).out(o0)"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="mask">
+  <strong>mask</strong>
+  <a class="anchor" href="#mask">#</a>
+</h3>
+<p>Uses a texture as a mask for the visual. Works in the same way a mask works in Photoshop or other raster graphics software: bright parts will make the image opace, while dark parts will make it more transparent.</p>
+<p class="center"><code>mask( texture )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "gradient(5).mask(voronoi(),3,0.5).invert([0,1]).out(o0)"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h2 id="reference">
+  Reference
+  <a class="anchor" href="#reference">#</a>
+</h2>
+<p>Remember you can check the <a href="https://hydra.ojack.xyz/api">interactive function reference</a> for a quick glossary of all the functions.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/ae4854097c66ac8cf4a9953e465c71803bbec867" title='Last modified by Renzo Torr- | June 10, 2025' target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>June 10, 2025</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/edit/main/content/docs/learning/video-synth-basics/blending.md" target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#some-blend-transforms">Some blend transforms</a>
+      <ul>
+        <li><a href="#blend"><strong>blend</strong></a></li>
+        <li><a href="#add"><strong>add</strong></a></li>
+        <li><a href="#sub"><strong>sub</strong></a></li>
+        <li><a href="#mult"><strong>mult</strong></a></li>
+        <li><a href="#diff"><strong>diff</strong></a></li>
+        <li><a href="#layer"><strong>layer</strong></a></li>
+        <li><a href="#mask"><strong>mask</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

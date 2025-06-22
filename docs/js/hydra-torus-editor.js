@@ -24,9 +24,9 @@ class HydraApp extends Torus.StyledComponent {
       return jdom`<div>${this.canvas}</div>`;
     }
   }
-  
+
   const hydraApp = new HydraApp();
-  
+
   class CodeMirrorApp extends Torus.StyledComponent {
     init(app) {
       this.app = app;
@@ -35,7 +35,7 @@ class HydraApp extends Torus.StyledComponent {
       this.consoleClass = "";
       this.lastCode = "";
       this.originalCode = "";
-  
+
       // https://github.com/ojack/hydra/blob/3dcbf85c22b9f30c45b29ac63066e4bbb00cf225/hydra-server/app/src/editor.js
       this.flashCode = (l0, l1) => {
         if (l0 === undefined) l0 = this.cm.firstLine();
@@ -51,14 +51,14 @@ class HydraApp extends Torus.StyledComponent {
           count++;
         }
       };
-  
+
       const getLine = () => {
         const c = this.cm.getCursor();
         const s = this.cm.getLine(c.line);
         this.flashCode(c.line, c.line + 1);
         return s;
       };
-  
+
       this.getCurrentBlock = () => {
         // thanks to graham wakefield + gibber
         const pos = this.cm.getCursor();
@@ -79,12 +79,12 @@ class HydraApp extends Torus.StyledComponent {
           ch: 0
         };
         const str = this.cm.getRange(pos1, pos2);
-  
+
         this.flashCode(startline, endline);
-  
+
         return str;
       };
-  
+
       this.evalCode = c => {
         try {
           let result = window.eval(c);
@@ -103,7 +103,7 @@ class HydraApp extends Torus.StyledComponent {
         }
         this.render();
       };
-  
+
       this.commands = {
         evalAll: () => {
           const code = this.cm.getValue();
@@ -150,14 +150,14 @@ class HydraApp extends Torus.StyledComponent {
           lineWrapping: true,
           styleSelectedText: true
         });
-  
+
         const keymap = {
           "Ctrl-Enter": (cm) => {
             this.commands.evalAll();
           }
         }
         this.cm.addKeyMap(keymap);
-        
+
         this.setCode(code);
       }
       this.cm.refresh();
@@ -224,7 +224,7 @@ class HydraApp extends Torus.StyledComponent {
           <button title="run" onclick=${ () => {
             this.commands.evalAll();
           } }>▶</>
-  
+
           <button title="reset code" onclick="${
             () => this.resetCode()
           }">
@@ -241,7 +241,7 @@ class HydraApp extends Torus.StyledComponent {
         <div class="editor-container">
           ${this.el}
         </div>
-      
+
         <div class="editor-console">
           >> <div class="${this.consoleClass}">${this.console}</div>
         </div>
@@ -249,14 +249,14 @@ class HydraApp extends Torus.StyledComponent {
       `;
     }
   }
-  
+
   class CodeApp extends Torus.StyledComponent {
     init() {
       this.showNotSupportedInEmbeddedEditor = false;
       this.cmApp = new CodeMirrorApp(this);
       this.placeholder = document.createElement("div");
       this.placeholder.className = "placeholder"
-      
+
       var observer = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting === true) {
@@ -273,7 +273,7 @@ class HydraApp extends Torus.StyledComponent {
         },
         { rootMargin: "-50% 0% -50% 0%", threshold: [0] }
       );
-  
+
       observer.observe(this.placeholder);
     }
     notSupportedInEmbeddedEditor() {
@@ -285,7 +285,7 @@ class HydraApp extends Torus.StyledComponent {
         box-sizing: border-box;
         position: relative;
         width: 100%;
-        margin: 75px 0;
+        margin: 30px 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -332,7 +332,7 @@ class HydraApp extends Torus.StyledComponent {
       `;
     }
   }
-  
+
   // window.$docsify = {
   //   auto2top: true,
   //   loadSidebar: true,
@@ -351,21 +351,21 @@ class HydraApp extends Torus.StyledComponent {
   //         );
   //         next(html);
   //       });
-  
+
   //       hook.doneEach(() => {
   //         const codeBlocks = document.querySelectorAll("pre.hydra-code");
-  
+
   //         codeBlocks.forEach(preEl => {
   //           const codeEl = preEl.firstChild;
   //           const originalCode = codeEl.textContent;
-  
+
   //           let codeApp = new CodeApp();
   //           preEl.insertAdjacentElement("afterend", codeApp.node);
   //           codeApp.cmApp.loaded(originalCode);
   //           preEl.style.display = "none";
   //         });
   //       });
-  
+
   //       hook.mounted(() => {
   //         // Called after initial completion. Only trigger once, no arguments.
   //       });

@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
+<head><script src="/hydra-docs-v2/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hydra-docs-v2/livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Source # noise # noise( scale = 10, offset = 0.1 )
-Generate Perlin noise.
-voronoi # voronoi( scale = 5, speed = 0.3, blending = 0.3 )
-Generate voronoi shapes.
-osc # osc( frequency = 60, sync = 0.1, offset )
-shape # shape( sides = 3, radius = 0.3, smoothing = 0.01 )
-gradient # gradient( speed )
-src # src( tex ) Accepts a texture, such as external source (s0, s1, s2, s3) or an output (o0, o1, o2, o3)">
+<meta name="description" content="sources # Sources are functions that generate video signals. These are the fundamental pieces of our visuals, we connect them to transforms and mix them with other functions in order to create our visuals. Using a musical analogy: sources are like instruments (guitars, oscillators, keyboards) and we connect them to transforms (effects) in order to create cool stuff.
+Some source functions # osc # A visual oscillator, goes from black to white smoothly.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Sources" />
-<meta property="og:description" content="Source # noise # noise( scale = 10, offset = 0.1 )
-Generate Perlin noise.
-voronoi # voronoi( scale = 5, speed = 0.3, blending = 0.3 )
-Generate voronoi shapes.
-osc # osc( frequency = 60, sync = 0.1, offset )
-shape # shape( sides = 3, radius = 0.3, smoothing = 0.01 )
-gradient # gradient( speed )
-src # src( tex ) Accepts a texture, such as external source (s0, s1, s2, s3) or an output (o0, o1, o2, o3)" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="sources" />
+<meta property="og:description" content="sources # Sources are functions that generate video signals. These are the fundamental pieces of our visuals, we connect them to transforms and mix them with other functions in order to create our visuals. Using a musical analogy: sources are like instruments (guitars, oscillators, keyboards) and we connect them to transforms (effects) in order to create cool stuff.
+Some source functions # osc # A visual oscillator, goes from black to white smoothly." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hydra.ojack.xyz/docs/docs/learning/video-synth-basics/src/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2023-11-16T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-11-20T16:23:31+01:00" />
-<title>Sources | hydra video synth</title>
-<link rel="manifest" href="/docs/manifest.json">
-<link rel="icon" href="/docs/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/docs/book.min.9bac9dc478cf52ca962a4f35e004c2cdc70a5461e7451956af25f951f9749ded.css" integrity="sha256-m6ydxHjPUsqWKk814ATCzccKVGHnRRlWryX5Ufl0ne0=" crossorigin="anonymous">
-  <script defer src="/docs/flexsearch.min.js"></script>
-  <script defer src="/docs/en.search.min.c0cdc9f1af0017e9cdc0e9c2736f81073249da4606e0c6c7a58f5d45cae92ceb.js" integrity="sha256-wM3J8a8AF&#43;nNwOnCc2&#43;BBzJJ2kYG4MbHpY9dRcrpLOs=" crossorigin="anonymous"></script>
+<meta property="og:url" content="http://localhost:1313/hydra-docs-v2/docs/learning/video-synth-basics/src/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2025-06-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-10T12:59:21-03:00" />
+
+<title>sources | hydra video synth</title>
+<link rel="manifest" href="/hydra-docs-v2/manifest.json">
+<link rel="icon" href="/hydra-docs-v2/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/hydra-docs-v2/book.min.9bac9dc478cf52ca962a4f35e004c2cdc70a5461e7451956af25f951f9749ded.css" integrity="sha256-m6ydxHjPUsqWKk814ATCzccKVGHnRRlWryX5Ufl0ne0=" crossorigin="anonymous">
+  <script defer src="/hydra-docs-v2/flexsearch.min.js"></script>
+  <script defer src="/hydra-docs-v2/en.search.min.3f0bed049a5592f5f43fd6d6e8cd9c2eceb3f7b6f07548b60a5c9d8d19caea1e.js" integrity="sha256-PwvtBJpVkvX0P9bW6M2cLs6z97bwdUi2ClydjRnK6h4=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -77,7 +66,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/addon/comment/comm
 crossorigin="anonymous"
 ></script>
 <script src="https://cdn.jsdelivr.net/npm/hydra-synth/dist/hydra-synth.js"></script>
-<script src="https://hydra.ojack.xyz/docs/js/hydra-torus-editor.js"></script>
+<script src="http://localhost:1313/hydra-docs-v2//js/hydra-torus-editor.js"></script>
 </head>
 <body dir="ltr">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
@@ -88,7 +77,7 @@ crossorigin="anonymous"
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="/docs/"><span>hydra video synth</span>
+  <a class="flex align-center" href="/hydra-docs-v2/"><span>hydra video synth</span>
   </a>
 </h2>
 
@@ -118,7 +107,7 @@ crossorigin="anonymous"
     <input type="checkbox" id="languages" class="toggle" />
     <label for="languages" class="flex justify-between">
       <a role="button" class="flex align-center">
-        <img src="/docs/svg/translate.svg" class="book-icon" alt="Languages" />
+        <img src="/hydra-docs-v2/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>
     </label>
@@ -126,13 +115,13 @@ crossorigin="anonymous"
     <ul>
       
       <li>
-        <a href="https://hydra.ojack.xyz/docs/ja/">
+        <a href="http://localhost:1313/hydra-docs-v2/ja/">
           日本語
         </a>
       </li>
       
       <li>
-        <a href="https://hydra.ojack.xyz/docs/pt/">
+        <a href="http://localhost:1313/hydra-docs-v2/pt/">
           Portuguese | Português
         </a>
       </li>
@@ -165,7 +154,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/quick-start/" class="">Quick start</a>
+    <a href="/hydra-docs-v2/docs/quick-start/" class="">quick start</a>
   
 
         </li>
@@ -178,9 +167,9 @@ crossorigin="anonymous"
   
 
   
-    <input type="checkbox" id="section-7cd66bd2d565ae5bb3c71a81f3ddbfa3" class="toggle" checked />
-    <label for="section-7cd66bd2d565ae5bb3c71a81f3ddbfa3" class="flex justify-between">
-      <a href="/docs/docs/learning/" class="">learning</a>
+    <input type="checkbox" id="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="toggle" checked />
+    <label for="section-632bd1ffdbcae04a1b0f08fa1dd878c0" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/" class="">learning</a>
     </label>
   
 
@@ -194,7 +183,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/getting-started/" class="">Getting started</a>
+    <a href="/hydra-docs-v2/docs/learning/getting-started/" class="">getting started</a>
   
 
         </li>
@@ -207,7 +196,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/web-editor/" class="">Using the web editor</a>
+    <a href="/hydra-docs-v2/docs/learning/web-editor/" class="">web editor</a>
   
 
         </li>
@@ -220,201 +209,9 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/video-synth-basics/" class="">Video Synth Basics</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/src/" class="active">Sources</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/coord/" class="">Geometry</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/color/" class="">Color</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/external-sources/" class="">External sources: webcam, video, canvas</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/combine/" class="">Blend</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/combinecoord/" class="">Modulate</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/video-synth-basics/settings/" class="">Synth Settings</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/" class="">Sequencing &amp; interactivity</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/arrays/" class="">Arrays</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/audio/" class="">Audio</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/midi/" class="">Midi</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/sequencing-and-interactivity/mouse/" class="">Mouse</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <span>Extending Hydra</span>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-14148bd41cd0b3003e4e88b693e6efb2" class="toggle"  />
-    <label for="section-14148bd41cd0b3003e4e88b693e6efb2" class="flex justify-between">
-      <a href="/docs/docs/learning/extending-hydra/contributing/" class="">Developing and contributing</a>
+    <input type="checkbox" id="section-abc558a55caa3a21197cd84f6409f58d" class="toggle" checked />
+    <label for="section-abc558a55caa3a21197cd84f6409f58d" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/video-synth-basics/" class="">video synth basics</a>
     </label>
   
 
@@ -428,10 +225,7 @@ crossorigin="anonymous"
   
 
   
-    <input type="checkbox" id="section-b494ecce649985cd11b51836e5d7e9e1" class="toggle"  />
-    <label for="section-b494ecce649985cd11b51836e5d7e9e1" class="flex justify-between">
-      <a href="/docs/docs/learning/extending-hydra/contributing/server/" class="">developing backend server</a>
-    </label>
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/src/" class="active">sources</a>
   
 
         </li>
@@ -444,10 +238,7 @@ crossorigin="anonymous"
   
 
   
-    <input type="checkbox" id="section-3624bfb3c585323e1150e68f68ae751f" class="toggle"  />
-    <label for="section-3624bfb3c585323e1150e68f68ae751f" class="flex justify-between">
-      <a href="/docs/docs/learning/extending-hydra/contributing/editor/" class="">developing editor</a>
-    </label>
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/outputs/" class="">outputs</a>
   
 
         </li>
@@ -460,10 +251,46 @@ crossorigin="anonymous"
   
 
   
-    <input type="checkbox" id="section-fbb2c3034da361fe243cc053f44f1c5c" class="toggle"  />
-    <label for="section-fbb2c3034da361fe243cc053f44f1c5c" class="flex justify-between">
-      <a href="/docs/docs/learning/extending-hydra/contributing/synth/" class="">developing hydra-synth</a>
-    </label>
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/transforms/" class="">transforms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/blending/" class="">blending</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/modulate/" class="">modulation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/video-synth-basics/settings/" class="">settings &amp; state</a>
   
 
         </li>
@@ -481,7 +308,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/extending-hydra/hydra-in-a-webpage/" class="">Hydra in a Webpage</a>
+    <a href="/hydra-docs-v2/docs/learning/external-sources/" class="">external sources</a>
   
 
         </li>
@@ -494,40 +321,9 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/extending-hydra/glsl/" class="">Custom GLSL</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/extending-hydra/extending-hydra/" class="">Using hydra with other javascript libraries</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-98f737d6280aa80f0960850113126c26" class="toggle"  />
-    <label for="section-98f737d6280aa80f0960850113126c26" class="flex justify-between">
-      <a href="/docs/docs/learning/guides/" class="">Guides</a>
+    <input type="checkbox" id="section-eca88cb65a773793437f0e9114baf99c" class="toggle"  />
+    <label for="section-eca88cb65a773793437f0e9114baf99c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/sequencing/" class="">sequencing</a>
     </label>
   
 
@@ -541,7 +337,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/textures/" class="">Hydra Book: Textures</a>
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrays/" class="">arrays</a>
   
 
         </li>
@@ -554,7 +350,28 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/how-to/" class="">How to</a>
+    <a href="/hydra-docs-v2/docs/learning/sequencing/arrow-functions/" class="">arrow functions</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e9c592a536d885dc59f7d3443e5419c" class="toggle"  />
+    <label for="section-9e9c592a536d885dc59f7d3443e5419c" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/interactivity/" class="">interactivity</a>
+    </label>
   
 
           
@@ -567,7 +384,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/how-to/record-hydra-output/" class="">Record hydra&#39;s output</a>
+    <a href="/hydra-docs-v2/docs/learning/interactivity/mouse/" class="">mouse</a>
   
 
         </li>
@@ -580,29 +397,7 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/how-to/use-hydra-without-showing-code/" class="">Use hydra without showing the code</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-    
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/guides/frames-and-timing/" class="">Frames and Timing</a>
+    <a href="/hydra-docs-v2/docs/learning/interactivity/audio/" class="">audio</a>
   
 
         </li>
@@ -615,39 +410,8 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/learning/guides/hydra-garden/" class="">Hydra Garden</a>
+    <a href="/hydra-docs-v2/docs/learning/interactivity/midi/" class="">midi</a>
   
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/guides/automatic-patches/" class="">Iteration: automatically generate patches</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/docs/learning/guides/javascript/" class="">javascript for hydra users</a>
-  
-
-        </li>
-      
-    
-  </ul>
 
         </li>
       
@@ -664,7 +428,23 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/reference/" class="">reference</a>
+    <input type="checkbox" id="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="toggle"  />
+    <label for="section-d32e8d2211a8b3a4c95f10e7889e9b44" class="flex justify-between">
+      <a role="button" class="">extending</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extensions/" class="">extensions</a>
   
 
         </li>
@@ -677,7 +457,275 @@ crossorigin="anonymous"
   
 
   
-    <a href="/docs/docs/community/" class="">community</a>
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/extending-hydra/" class="">other libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/glsl/" class="">custom glsl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8afa17f34011c70734ab422498c11155" class="toggle"  />
+    <label for="section-8afa17f34011c70734ab422498c11155" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/" class="">developing &amp; contributing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/editor/" class="">editor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/synth/" class="">developing hydra-synth</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/extending-hydra/contributing/server/" class="">backend server</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a7f0265de67bb55990b78cc970db95f" class="toggle"  />
+    <label for="section-5a7f0265de67bb55990b78cc970db95f" class="flex justify-between">
+      <a href="/hydra-docs-v2/docs/learning/guides/" class="">guides</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/javascript/" class="">JavaScript for Hydra users</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/automatic-patches/" class="">Iteration &amp; generative patches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/frames-and-timing/" class="">Updating frames &amp; precise timing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/textures/" class="">Textures [Hydra Book]</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/audio/" class="">Audio-reactivity explained</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/event-listeners/" class="">Clicks &amp; keys</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0eb140a6ac0de442b2f42574663cfb56" class="toggle"  />
+    <label for="section-0eb140a6ac0de442b2f42574663cfb56" class="flex justify-between">
+      <a role="button" class="">How to...</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/hydra-in-a-webpage/" class="">Embed Hydra on your webpage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/record-hydra-output/" class="">Record Hydra&#39;s output</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/learning/guides/how-to/use-hydra-without-showing-code/" class="">Use Hydra without showing the code</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/reference/" class="">reference</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/hydra-docs-v2/docs/community/" class="">community</a>
   
 
         </li>
@@ -699,7 +747,7 @@ crossorigin="anonymous"
 <ul>
   
   <li>
-    <a href="/docs/posts/"  >
+    <a href="/hydra-docs-v2/posts/"  >
         blog
       </a>
   </li>
@@ -740,14 +788,14 @@ crossorigin="anonymous"
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="/docs/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="/hydra-docs-v2/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Sources</strong>
+  <strong>sources</strong>
 
   <label for="toc-control">
     
-    <img src="/docs/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="/hydra-docs-v2/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
@@ -759,17 +807,24 @@ crossorigin="anonymous"
   
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#some-source-functions">Some source functions</a>
       <ul>
-        <li><a href="#noise">noise</a></li>
-        <li><a href="#voronoi">voronoi</a></li>
-        <li><a href="#osc">osc</a></li>
-        <li><a href="#shape">shape</a></li>
-        <li><a href="#gradient">gradient</a></li>
-        <li><a href="#src">src</a></li>
-        <li><a href="#solid">solid</a></li>
-        <li><a href="#prev">prev</a></li>
-        <li><a href="#out">out</a></li>
+        <li><a href="#osc"><strong>osc</strong></a></li>
+        <li><a href="#solid"><strong>solid</strong></a></li>
+        <li><a href="#noise"><strong>noise</strong></a></li>
+        <li><a href="#voronoi"><strong>voronoi</strong></a></li>
+        <li><a href="#shape"><strong>shape</strong></a></li>
+        <li><a href="#gradient"><strong>gradient</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#a-special-src">A special src</a>
+      <ul>
+        <li><a href="#src"><strong>src</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#outputting">Outputting</a>
+      <ul>
+        <li><a href="#out"><strong>out</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -784,16 +839,21 @@ crossorigin="anonymous"
 
       
       
-  <article class="markdown"><h1 id="source">
-  Source
-  <a class="anchor" href="#source">#</a>
+  <article class="markdown"><h1 id="sources">
+  sources
+  <a class="anchor" href="#sources">#</a>
 </h1>
-<h3 id="noise">
-  noise
-  <a class="anchor" href="#noise">#</a>
+<p>Sources are functions that generate video signals. These are the fundamental pieces of our visuals, we connect them to transforms and mix them with other functions in order to create our visuals. Using a musical analogy: sources are like instruments (guitars, oscillators, keyboards) and we connect them to transforms (effects) in order to create cool stuff.</p>
+<h2 id="some-source-functions">
+  Some source functions
+  <a class="anchor" href="#some-source-functions">#</a>
+</h2>
+<h3 id="osc">
+  <strong>osc</strong>
+  <a class="anchor" href="#osc">#</a>
 </h3>
-<p>noise( scale = 10, offset = 0.1 )</p>
-<p>Generate <a href="https://en.wikipedia.org/wiki/Perlin_noise">Perlin noise</a>.</p>
+<p>A visual oscillator, goes from black to white smoothly. The <code>frequency</code> defines how many oscillations are made along the screen. The <code>sync</code> how fast they move. The <code>offset</code> offsets each color channel (Red, Green and Blue).</p>
+<p class="center"><code>osc( frequency = 60, sync = 0.1, offset )</code></p>
 <div class="hydra-example">
     
     <div></div>
@@ -806,7 +866,7 @@ crossorigin="anonymous"
        
         
         
-        var originalCode = "// default\nnoise(10, 0.1).out(o0)"
+        var originalCode = "// changing frequency with a list\nosc([2,30,60,90],0.1,0.2).out(o0)"
         var codeApp = new CodeApp();
         preEl.insertAdjacentElement("afterend", codeApp.node);
         
@@ -814,12 +874,68 @@ crossorigin="anonymous"
             
         preEl.style.display = "none";
     </script>
-</div><h3 id="voronoi">
-  voronoi
+</div><h3 id="solid">
+  <strong>solid</strong>
+  <a class="anchor" href="#solid">#</a>
+</h3>
+<p>Outputs a solid color that covers the whole screen. You can set the value for each color channel (Red, Green, Blue and Alpha).</p>
+<p class="center"><code>solid( r, g, b, a = 1 )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "// red, green and magenta\nsolid(1,0,0,1).out(o0)\nsolid(0,1,0,1).out(o1)\nsolid(1,0,1,1).out(o2)\n\nrender()"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h3 id="noise">
+  <strong>noise</strong>
+  <a class="anchor" href="#noise">#</a>
+</h3>
+<p>Generates 2D slices of <a href="https://en.wikipedia.org/wiki/Perlin_noise">Perlin noise</a>. You can set the both the <code>scale</code> and how fast the noise changes using the first two arguments.</p>
+<p class="center"><code>noise( scale = 10, offset = 0.1 )</code></p>
+<div class="hydra-example">
+    
+    <div></div>
+    <script>
+        
+       
+       
+    
+        var preEl = document.currentScript.previousElementSibling
+       
+        
+        
+        var originalCode = "// default\nnoise(10,0.1).out(o0)"
+        var codeApp = new CodeApp();
+        preEl.insertAdjacentElement("afterend", codeApp.node);
+        
+        codeApp.cmApp.loaded(originalCode);
+            
+        preEl.style.display = "none";
+    </script>
+</div><h5 id="please-note-that-the-noise-generator-outputs-both-positive-and-negative-values">
+  Please note that the <code>noise</code> generator outputs both positive and negative values.
+  <a class="anchor" href="#please-note-that-the-noise-generator-outputs-both-positive-and-negative-values">#</a>
+</h5>
+<h3 id="voronoi">
+  <strong>voronoi</strong>
   <a class="anchor" href="#voronoi">#</a>
 </h3>
-<p>voronoi( scale = 5, speed = 0.3, blending = 0.3 )</p>
-<p>Generate <a href="https://en.wikipedia.org/wiki/Voronoi_diagram">voronoi shapes</a>.</p>
+<p>Generates <a href="https://en.wikipedia.org/wiki/Voronoi_diagram">Voronoi shapes</a>. You can set the scale, the speed at which they change and their blending.</p>
+<p class="center"><code>voronoi( scale = 5, speed = 0.3, blending = 0.3 )</code></p>
 <div class="hydra-example">
     
     <div></div>
@@ -840,36 +956,12 @@ crossorigin="anonymous"
             
         preEl.style.display = "none";
     </script>
-</div><h3 id="osc">
-  osc
-  <a class="anchor" href="#osc">#</a>
-</h3>
-<p>osc( frequency = 60, sync = 0.1, offset )</p>
-<div class="hydra-example">
-    
-    <div></div>
-    <script>
-        
-       
-       
-    
-        var preEl = document.currentScript.previousElementSibling
-       
-        
-        
-        var originalCode = "// frequency\nosc( [1,10,50,100,250,500].fast(2) ).out(o0)"
-        var codeApp = new CodeApp();
-        preEl.insertAdjacentElement("afterend", codeApp.node);
-        
-        codeApp.cmApp.loaded(originalCode);
-            
-        preEl.style.display = "none";
-    </script>
 </div><h3 id="shape">
-  shape
+  <strong>shape</strong>
   <a class="anchor" href="#shape">#</a>
 </h3>
-<p>shape( sides = 3, radius = 0.3, smoothing = 0.01 )</p>
+<p>Generates simple polygons, You can set how many sides they have, the size radius and how smooth the edges are.</p>
+<p class="center"><code>shape( sides = 3, radius = 0.3, smoothing = 0.01 )</code></p>
 <div class="hydra-example">
     
     <div></div>
@@ -891,10 +983,11 @@ crossorigin="anonymous"
         preEl.style.display = "none";
     </script>
 </div><h3 id="gradient">
-  gradient
+  <strong>gradient</strong>
   <a class="anchor" href="#gradient">#</a>
 </h3>
-<p>gradient( speed )</p>
+<p>Outputs a simple gradient sequence. You can set the speed at which the blue channel oscillates.</p>
+<p class="center"><code>gradient( speed )</code></p>
 <div class="hydra-example">
     
     <div></div>
@@ -915,12 +1008,16 @@ crossorigin="anonymous"
             
         preEl.style.display = "none";
     </script>
-</div><h3 id="src">
-  src
+</div><h2 id="a-special-src">
+  A special src
+  <a class="anchor" href="#a-special-src">#</a>
+</h2>
+<h3 id="src">
+  <strong>src</strong>
   <a class="anchor" href="#src">#</a>
 </h3>
-<p>src( tex )
-Accepts a texture, such as external source (s0, s1, s2, s3) or an output (o0, o1, o2, o3)</p>
+<p>Accepts a texture (framebuffer) and shows it on screen, such as external sources (s0, s1, s2, s3) or a Hydra output (o0, o1, o2, o3). This allows us to include external images in our patch or to connect patches with each other.</p>
+<p class="center"><code>src( tex )</code></p>
 <div class="hydra-example">
     
     <div></div>
@@ -941,41 +1038,16 @@ Accepts a texture, such as external source (s0, s1, s2, s3) or an output (o0, o1
             
         preEl.style.display = "none";
     </script>
-</div><h3 id="solid">
-  solid
-  <a class="anchor" href="#solid">#</a>
-</h3>
-<p>solid( r, g, b, a = 1 )</p>
-<div class="hydra-example">
-    
-    <div></div>
-    <script>
-        
-       
-       
-    
-        var preEl = document.currentScript.previousElementSibling
-       
-        
-        
-        var originalCode = "// cycling through red, green and blue\nsolid([1,0,0],[0,1,0],[0,0,1],1).out(o0)"
-        var codeApp = new CodeApp();
-        preEl.insertAdjacentElement("afterend", codeApp.node);
-        
-        codeApp.cmApp.loaded(originalCode);
-            
-        preEl.style.display = "none";
-    </script>
-</div><h3 id="prev">
-  prev
-  <a class="anchor" href="#prev">#</a>
-</h3>
-<p>prev(  )</p>
+</div><h2 id="outputting">
+  Outputting
+  <a class="anchor" href="#outputting">#</a>
+</h2>
+<p>Following the musical analogy from above, all instruments (sources), regardless of how many effects (transforms) we add need to be outputted to some speakers (output). The special Hydra function that allows us to output our visuals to a framebuffer is called <code>out</code>.</p>
 <h3 id="out">
-  out
+  <strong>out</strong>
   <a class="anchor" href="#out">#</a>
 </h3>
-<p>out( texture = all )</p>
+<p class="center"><code>out( output = o0 )</code></p>
 <div class="hydra-example">
     
     <div></div>
@@ -988,7 +1060,7 @@ Accepts a texture, such as external source (s0, s1, s2, s3) or an output (o0, o1
        
         
         
-        var originalCode = "// default\nosc().out(o1)\nsrc(o1).out(o0)"
+        var originalCode = "osc().out(o1)\nsrc(o1).out(o0)"
         var codeApp = new CodeApp();
         preEl.insertAdjacentElement("afterend", codeApp.node);
         
@@ -996,7 +1068,9 @@ Accepts a texture, such as external source (s0, s1, s2, s3) or an output (o0, o1
             
         preEl.style.display = "none";
     </script>
-</div></article>
+</div><hr>
+<p>See the <a href="https://hydra.ojack.xyz/api">interactive function reference</a> for a glossary of all the functions.</p>
+</article>
  
       
 
@@ -1005,9 +1079,9 @@ Accepts a texture, such as external source (s0, s1, s2, s3) or an output (o0, o1
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/bbe4f2e79812ee5bfaee47b573afdf0d39f5011b" title='Last modified by Olivia Jack | November 20, 2023' target="_blank" rel="noopener">
-      <img src="/docs/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 20, 2023</span>
+  <div><a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/commit/ae4854097c66ac8cf4a9953e465c71803bbec867" title='Last modified by Renzo Torr- | June 10, 2025' target="_blank" rel="noopener">
+      <img src="/hydra-docs-v2/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>June 10, 2025</span>
     </a>
   </div>
 
@@ -1015,7 +1089,7 @@ Accepts a texture, such as external source (s0, s1, s2, s3) or an output (o0, o1
 
   <div>
     <a class="flex align-center" href="https://github.com/hydra-synth/hydra-docs-v2/edit/main/content/docs/learning/video-synth-basics/src.md" target="_blank" rel="noopener">
-      <img src="/docs/svg/edit.svg" class="book-icon" alt="Edit" />
+      <img src="/hydra-docs-v2/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>Edit this page</span>
     </a>
   </div>
@@ -1050,17 +1124,24 @@ Accepts a texture, such as external source (s0, s1, s2, s3) or an output (o0, o1
   
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#some-source-functions">Some source functions</a>
       <ul>
-        <li><a href="#noise">noise</a></li>
-        <li><a href="#voronoi">voronoi</a></li>
-        <li><a href="#osc">osc</a></li>
-        <li><a href="#shape">shape</a></li>
-        <li><a href="#gradient">gradient</a></li>
-        <li><a href="#src">src</a></li>
-        <li><a href="#solid">solid</a></li>
-        <li><a href="#prev">prev</a></li>
-        <li><a href="#out">out</a></li>
+        <li><a href="#osc"><strong>osc</strong></a></li>
+        <li><a href="#solid"><strong>solid</strong></a></li>
+        <li><a href="#noise"><strong>noise</strong></a></li>
+        <li><a href="#voronoi"><strong>voronoi</strong></a></li>
+        <li><a href="#shape"><strong>shape</strong></a></li>
+        <li><a href="#gradient"><strong>gradient</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#a-special-src">A special src</a>
+      <ul>
+        <li><a href="#src"><strong>src</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#outputting">Outputting</a>
+      <ul>
+        <li><a href="#out"><strong>out</strong></a></li>
       </ul>
     </li>
   </ul>
